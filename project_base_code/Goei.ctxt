@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Goei
+comment1.params=
+comment1.target=Goei()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ Butterfly()
+comment4.params=
+comment4.target=void\ levelMovement()
+comment5.params=movepov\ ym\ moveneg\ yp
+comment5.target=void\ movementmodi(int,\ int,\ int,\ int)
+comment6.params=
+comment6.target=void\ timeInc()
+comment7.params=xcord\ ycord
+comment7.target=void\ makeBomb(int,\ int)
+comment8.params=
+comment8.target=void\ deathSound()
+numComments=9

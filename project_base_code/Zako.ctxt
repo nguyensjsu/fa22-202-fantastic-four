@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Zako
+comment1.params=
+comment1.target=Zako()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ menuAnis()
+comment4.params=
+comment4.target=void\ Bee()
+comment5.params=
+comment5.target=void\ timeInc()
+comment6.params=
+comment6.target=void\ levelMovement()
+comment7.params=movepov\ ym\ moveneg\ yp
+comment7.target=void\ movementmodi(int,\ int,\ int,\ int)
+comment8.params=xcord\ ycord
+comment8.target=void\ makeBomb(int,\ int)
+numComments=9
