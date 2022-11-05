@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Box
 comment1.params=image
@@ -11,3 +12,18 @@ comment4.target=void\ movement()
 comment5.params=
 comment5.target=void\ topReset()
 numComments=6
+=======
+#BlueJ class context
+comment0.target=Box
+comment1.params=image
+comment1.target=Box(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ randomBlink()
+comment4.params=
+comment4.target=void\ movement()
+comment5.params=
+comment5.target=void\ topReset()
+numComments=6
+>>>>>>> 1361153b5f101c364e745cd82527e23f2b9dcddd
