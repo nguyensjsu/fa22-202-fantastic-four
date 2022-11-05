@@ -7,7 +7,7 @@
 - Yikang Chen - [Member Journal](/individual_journals/yikang_chen_journal.md)
 - Jianle Li - [Member Journal](/individual_journals/jianle_li_journal.md)
 - Ray Sheng - [Member Journal](/individual_journals/ray_sheng_journal.md)
-- Yiyang Yin - [Member Journal]()
+- Yiyang Yin - [Member Journal](/individual_journals/yiyang_yin_journal.md)
 
 ## Project Summary
 
