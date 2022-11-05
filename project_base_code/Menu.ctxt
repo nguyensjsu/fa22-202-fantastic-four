@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Menu
 comment1.params=
 comment1.target=void\ act()
 numComments=2
-=======
-#BlueJ class context
-comment0.target=Menu
-comment1.params=
-comment1.target=void\ act()
-numComments=2
->>>>>>> 1361153b5f101c364e745cd82527e23f2b9dcddd

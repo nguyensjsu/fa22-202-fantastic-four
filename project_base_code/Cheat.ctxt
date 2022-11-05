@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 #BlueJ class context
 comment0.target=Cheat
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Cheat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Cheat\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Cheat()
 comment2.params=
@@ -9,15 +8,3 @@ comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ timeInc()
 numComments=4
-=======
-#BlueJ class context
-comment0.target=Cheat
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Cheat\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Cheat()
-comment2.params=
-comment2.target=void\ act()
-comment3.params=
-comment3.target=void\ timeInc()
-numComments=4
->>>>>>> 1361153b5f101c364e745cd82527e23f2b9dcddd
