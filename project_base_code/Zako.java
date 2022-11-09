@@ -28,6 +28,9 @@ public class Zako extends Actor
             if(laser!=null){
                 getWorld().removeObject(laser);
                 makeBomb(getX()+10,getY());
+
+                dropPowerup(getX(), getY()); //testing
+                
                 death.play();
                 Fighter.score = Fighter.score +50;
                 
@@ -83,5 +86,10 @@ public class Zako extends Actor
     public void makeBomb(int xcord, int ycord){
         Bomb bomb = new Bomb();
         getWorld().addObject(bomb,xcord,ycord);
+    }
+
+    public void dropPowerup(int x, int y){
+        PowerupLife pu = new PowerupLife();
+        getWorld().addObject(pu, x, y);
     }
 }

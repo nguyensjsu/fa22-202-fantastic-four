@@ -75,6 +75,7 @@ public class Fighter extends Actor
     }
     public void Bombed(){
         Actor bomb = getOneIntersectingObject(Bomb.class);
+        Actor blaser = getOneIntersectingObject(Blaser.class);
         if(bomb!=null&&lives==3){
             lives=2;
             getWorld().removeObject(bomb);
@@ -90,7 +91,6 @@ public class Fighter extends Actor
             getWorld().removeObject(bomb);
             getWorld().removeObject(this);
         }
-        Actor blaser = getOneIntersectingObject(Blaser.class);
         if(Station.level==3){
             if(blaser!=null||bomb!=null){
                 getWorld()  .getObjects(Fighterc.class).get(0).setImage("invis.png");
@@ -106,8 +106,8 @@ public class Fighter extends Actor
                 for(int f=0;f<1;f++){
                     Fighterc fighterc = new Fighterc();
                     Fighterc fighterc2 = new Fighterc();
-                    getWorld().addObject(fighterc,15,485);
-                    getWorld().addObject(fighterc2,15,455);
+                    getWorld().addObject(fighterc,220,10);
+                    getWorld().addObject(fighterc2,255,10);
                     madeReps=2;
                 }
                 makeReps=false;
@@ -130,5 +130,23 @@ public class Fighter extends Actor
         Cheat cheat = new Cheat();
         getWorld().addObject(cheat,43,32);
         madecheats++;
+    }
+
+    public void lifePlus(){
+        if (lives < 3){
+            lives++;
+            if (lives == 3){
+                Fighterc lifeCount = getWorld().getObjects(Fighterc.class).get(0);
+                lifeCount.setImage("fighter.png");
+                lifeCount.getImage().scale(25,25);
+                lifeCount.setLocation(220,10);
+            }
+            if (lives == 2){
+                Fighterc lifeCount = getWorld().getObjects(Fighterc.class).get(1);
+                lifeCount.setImage("fighter.png");
+                lifeCount.getImage().scale(25,25);
+                lifeCount.setLocation(255,10);
+            }
+        }
     }
 }

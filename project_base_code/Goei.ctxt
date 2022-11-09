@@ -16,4 +16,6 @@ comment7.params=xcord\ ycord
 comment7.target=void\ makeBomb(int,\ int)
 comment8.params=
 comment8.target=void\ deathSound()
-numComments=9
+comment9.params=x\ y
+comment9.target=void\ dropPowerup(int,\ int)
+numComments=10

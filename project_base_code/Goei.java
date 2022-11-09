@@ -23,6 +23,9 @@ public class Goei extends Actor
                 if(Station.level>1){
                     makeBomb(getX()+10,getY());
                 }
+
+                dropPowerup(getX(), getY()); // testing
+
                 death.play();
                 Fighter.score = Fighter.score +80;
                 getWorld().removeObject(this);
@@ -79,8 +82,12 @@ public class Goei extends Actor
         getWorld().addObject(bomb,xcord,ycord);
     }
     public void deathSound(){
-    if(time==1){
-        death.play();
+        if(time==1){
+            death.play();
+        }
     }
+    public void dropPowerup(int x, int y){
+        PowerupLife pu = new PowerupLife();
+        getWorld().addObject(pu, x, y);
     }
-    }
+}
