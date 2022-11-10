@@ -16,4 +16,6 @@ comment7.params=movepov\ ym\ moveneg\ yp
 comment7.target=void\ movementmodi(int,\ int,\ int,\ int)
 comment8.params=xcord\ ycord
 comment8.target=void\ makeBomb(int,\ int)
-numComments=9
+comment9.params=x\ y
+comment9.target=void\ dropPowerup(int,\ int)
+numComments=10

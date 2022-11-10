@@ -4,6 +4,7 @@ public class Fighter extends Actor
     private int time;
     public static int score;
     public static int lives =3;
+    public static int fighterlevel = 1;
     public static boolean makeReps;
     private int madeReps=0;
     public int madecheats =0;
@@ -18,19 +19,62 @@ public class Fighter extends Actor
         setLivesRep();
         Bombed();
         cheatOn();
-    }    
+        Fighterlevel();
+    }
+    public void Fighterlevel(){
+        if(score >= 700){
+            fighterlevel = 2;
+        }
+        else if(score >=1500){
+            fighterlevel = 3;
+        }
+        if(getWorld() != null){
+        getWorld().showText("Level: "+String.valueOf(fighterlevel), 320, 15);
+        }
+        
+    }
     public void fire(){
         if(time>40){
-            Laser laser = new Laser();
-            getWorld().addObject(laser,getX(),getY()-38);
-            time=0;           
+            if(score >= 0){
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX(),getY()-38);
+                time=0;
+                }
+                if(score >= 700){
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-15,getY()-38);
+                getWorld().addObject(laser,getX()+15,getY()-38);
+                time=0;
+                }
+                if(score >= 1500){
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-30,getY()-38);
+                getWorld().addObject(laser,getX()+20,getY()-38);
+                getWorld().addObject(laser,getX()+50,getY()-38);
+                time=0;
+                } 
         }
         fire.play();
         if(Station.cheaton){
             if(time>1){
+                if(score >= 0){
                 Laser laser = new Laser();
                 getWorld().addObject(laser,getX(),getY()-38);
-                time=0;           
+                time=0;
+                }
+                if(score >= 700){
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-15,getY()-38);
+                getWorld().addObject(laser,getX()+15,getY()-38);
+                time=0;
+                }
+                if(score >= 1500){
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-30,getY()-38);
+                getWorld().addObject(laser,getX()+20,getY()-38);
+                getWorld().addObject(laser,getX()+50,getY()-38);
+                time=0;
+                } 
             }
         }
     }
