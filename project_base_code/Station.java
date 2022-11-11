@@ -1,9 +1,14 @@
 import greenfoot.*;
-import java.io.*;  
+import java.io.*;
+import java.util.*;
+
 public class Station extends Actor
 {
     public int fmount=1;
+
+    // level has only two values: 0 and 1.
     public static int level=0;
+
     GreenfootSound stheme = new GreenfootSound("stheme.mp3");
     GreenfootSound slevel = new GreenfootSound("levelstart.mp3");
     public boolean makeZako1;
@@ -13,16 +18,132 @@ public class Station extends Actor
     public static boolean gameover;
     public boolean makeBoss;
     public static boolean cheaton;
+
+    private int time = 0;
+    private int enemyIndex = -1;
+
     public Station(){
         //getImage().scale(100,100);
     }
     public void act()
     {
         menuAway();
-        levelCommands();
-        changeLevel();
+
+        // no levels
+        // levelCommands();
+        // changeLevel();
+
+        populateEnemy();
+
+        time++;
+
         gameOver();
-    }    
+    }
+
+    private void populateEnemy() {
+        // game not started.
+        if (level == 0) {
+            return;
+        }
+
+        // 100 equals 1 seconds in my computer.
+        int interval = 100 * 5;
+
+        // populate enemy every 5 seconds.
+        // and also at the beginning of the game.
+        if (enemyIndex >= 0 && time % interval != 0) {
+            return;
+        }
+
+        enemyIndex++;
+
+        // screen size: 500x500
+        int x = 0;
+        int y = 60;
+        Random random = new Random();
+
+
+        if (enemyIndex >=0 && enemyIndex < 5) {
+            System.out.println("normal enemies");
+
+            for (int i = 0; i < 2; i++) {
+                while (true) {
+                    x = 80 + random.nextInt(400);
+                    y = 60 + random.nextInt(40);
+                    if (!intersectWithOtherEnemies(x, y)) {
+                        makeGoei(x, y);
+                        break;
+                    }
+                }
+            }
+
+            for (int i = 0; i < 2; i++) {
+                while (true) {
+                    x = 80 + random.nextInt(400);
+                    y = 60 + random.nextInt(40);
+                    if (!intersectWithOtherEnemies(x, y)) {
+                        makeZako(x, y);
+                        break;
+                    }
+                }
+            }
+
+        }
+
+        if (enemyIndex >=5 && enemyIndex < 10) {
+            System.out.println("advanced enemies");
+
+            for (int i = 0; i < 2; i++) {
+                while (true) {
+                    x = 80 + random.nextInt(400);
+                    y = 60 + random.nextInt(40);
+                    if (!intersectWithOtherEnemies(x, y)) {
+                        makeGoei(x, y);
+                        break;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < 2; i++) {
+                while (true) {
+                    x = 80 + random.nextInt(400);
+                    y = 60 + random.nextInt(40);
+                    if (!intersectWithOtherEnemies(x, y)) {
+                        makeZako(x, y);
+                        break;
+                    }
+
+                }
+            }
+        }
+
+        if (enemyIndex == 10) {
+            System.out.println("Boss");
+            x = 250;
+            y = 70;
+            makeBoss(x, y);
+        }
+
+    }
+
+    private boolean intersectWithOtherEnemies(int x, int y) {
+        List<Goei> listGoei = getWorld().getObjects(Goei.class);
+        for (Goei g: listGoei) {
+            if (Math.abs(g.getX() - x) < 30 && Math.abs(g.getY() - y) < 30) {
+                return true;
+            }
+        }
+
+        List<Zako> listZako = getWorld().getObjects(Zako.class);
+        for (Zako z: listZako) {
+            if (Math.abs(z.getX() - x) < 30 && Math.abs(z.getY() - y) < 30) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void menuAway(){
         Object menu = getWorld().getObjects(Menu.class);
         if( (!getWorld().getObjects(Menu.class).isEmpty()&&(menu!=null))&&(Greenfoot.isKeyDown("space"))){
@@ -37,10 +158,10 @@ public class Station extends Actor
             Fighter.lives=3;
             Fighter.score=0;
         }
-    }   
+    }
     public void removeMenu(){
         if(!getWorld().getObjects(Menu.class).isEmpty()){
-           getWorld().removeObjects(getWorld().getObjects(Menu.class));
+            getWorld().removeObjects(getWorld().getObjects(Menu.class));
         }
     }
     public void makeFighter(){
@@ -51,7 +172,7 @@ public class Station extends Actor
             fmount = fmount -1;
             Score score = new Score();
             getWorld().addObject(score,473,10);
-        }   
+        }
     }
     public void makeZako(int xcord,int ycord){
         Zako zako = new Zako();
@@ -72,6 +193,8 @@ public class Station extends Actor
         makeGoei1=true;
         makeBoss=true;
     }
+
+    /*
     public void changeLevel(){
         if(level==1){
             if((getWorld().getObjects(Zako.class).isEmpty())&&(getWorld().getObjects(Goei.class).isEmpty()) ){
@@ -84,7 +207,9 @@ public class Station extends Actor
             }
         }
     }
-    public void gameOver(){ 
+    */
+
+    public void gameOver(){
         if(level>0&&getWorld().getObjects(Fighter.class).isEmpty()){
             if(getWorld().getObjects(Gover.class).size()<1){
                 Gover gover = new Gover();
@@ -93,6 +218,8 @@ public class Station extends Actor
             }
         }
     }
+
+    /*
     public void levelCommands(){
        if((level==1)){
            if(makeZako1){
@@ -109,8 +236,8 @@ public class Station extends Actor
                    makeGoei(75+(x*50),135);
                }
                makeGoei1=false;
-           }      
-       }       
+           }
+       }
        if((level==2)){
            if((makeGoei1)&&(goeismadeat1<16)){
                for(int x=0;x<8;x++){
@@ -120,8 +247,8 @@ public class Station extends Actor
                    makeGoei(75+(x*50),175);
                }
                makeGoei1=false;
-           }     
-       } 
+           }
+       }
        if(level==2){
            if(makeZako1){
                for(int x=0;x<5;x++){
@@ -151,8 +278,6 @@ public class Station extends Actor
            }
        }
     }
+    */
 
 }
-
-    
-
