@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LaserContext
+comment1.params=laserStrategy
+comment1.target=LaserContext(LaserStrategy)
+comment2.params=offset\ fighter
+comment2.target=void\ executeStrategy(int,\ Fighter)
+numComments=3

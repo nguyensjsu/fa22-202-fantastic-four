@@ -1,12 +1,12 @@
 import greenfoot.*;  
-public class Laser extends Actor
+public class LaserRight extends Laser
 {
-    public Laser(){
+    public LaserRight(){
         getImage().scale(10,20);
     }
     public void act() 
     {
-        setLocation(getX(),getY()-20);
+        setLocation(getX()+2,getY()-20);
         behavior();
     }
     public void behavior(){
