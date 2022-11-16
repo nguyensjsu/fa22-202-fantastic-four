@@ -2,7 +2,21 @@
 
 ## Weekly Scrum Report
 
-### 10-29 to 11-04
+- add fire support to fighter - done
+- add fire support base strat - done
+- add custom movement laser -done
+- add fire support strat 1 - done
+- add Timer mechanism for non-actor/non-world objects - done
+- add fire support strat 2
+- add fs powerup 1
+- add fs powerup 2
+- change drop mechanism for enemies to accommdate new powerups
+
+### Week 3
+
+### Week 2
+
+### Week 1
 
 #### Scrum Report
 

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Timer
+comment1.params=t
+comment1.target=Timer(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=o
+comment3.target=void\ addObserver(ITimerObserver)
+comment4.params=
+comment4.target=void\ notifyObservers()
+comment5.params=
+comment5.target=void\ start()
+comment6.params=
+comment6.target=void\ increment()
+numComments=7
