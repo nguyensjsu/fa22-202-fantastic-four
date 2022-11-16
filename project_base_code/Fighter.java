@@ -13,13 +13,13 @@ public class Fighter extends Actor
     private int fsTime;
     private FireSupportStrat currentFS = new FireSupportStrat(this);
     private FireSupportStrat fsRadial = new FsRadial(this);
-    //private FireSupportStrat fsWave = new FsWave(this);
+    private FireSupportStrat fsWave = new FsWave(this);
 
 
     GreenfootSound fire = new GreenfootSound("fire.mp3");
     public Fighter(){
         getImage().scale(50,50);
-        setFS(fsRadial); //testing
+        setFS(fsWave); //testing only, implement pickup later
     }
     public void act() 
     {

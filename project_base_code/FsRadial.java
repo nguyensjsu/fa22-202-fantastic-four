@@ -27,8 +27,10 @@ public class FsRadial extends FireSupportStrat implements ITimerObserver
 		if(wail.isPlaying()){
 			wail.stop();
 		}
-		explode.play();
-		addShraps();
+		if(fighter != null){
+			explode.play();
+			addShraps();
+		}
 	}
 
 	private void generateCoords(){

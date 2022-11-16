@@ -31,17 +31,25 @@ public class LaserCustom extends Laser
 		}
 	}
 
-	private void move(){
-		setLocation(getX() + velocityX, getY() - velocityY);
-	}
-
-	private void setVelocity(int x, int y){
+	public void setVelocity(int x, int y){
 		this.velocityX = x;
 		this.velocityY = y;
 	}
 
-	private void setStart(int x, int y){
+	public void setStart(int x, int y){
 		this.startX = x;
 		this.startY = y;
+	}
+
+	public int getStartX(){
+		return startX;
+	}
+
+	public int getStartY(){
+		return startY;
+	}
+
+	private void move(){
+		setLocation(getX() + velocityX, getY() - velocityY);
 	}
 }

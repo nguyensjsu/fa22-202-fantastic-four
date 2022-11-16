@@ -1,11 +1,17 @@
 #BlueJ class context
 comment0.target=LaserCustom
-comment1.params=x\ y
-comment1.target=LaserCustom(int,\ int)
-comment2.params=
-comment2.target=void\ act()
+comment1.params=
+comment1.target=LaserCustom()
+comment2.params=x\ y
+comment2.target=LaserCustom(int,\ int)
 comment3.params=
-comment3.target=void\ behavior()
+comment3.target=void\ act()
 comment4.params=
-comment4.target=void\ move()
-numComments=5
+comment4.target=void\ behavior()
+comment5.params=
+comment5.target=void\ move()
+comment6.params=x\ y
+comment6.target=void\ setVelocity(int,\ int)
+comment7.params=x\ y
+comment7.target=void\ setStart(int,\ int)
+numComments=8
