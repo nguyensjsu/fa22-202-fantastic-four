@@ -8,14 +8,24 @@ public class Fighter extends Actor
     public static boolean makeReps;
     private int madeReps=0;
     public int madecheats =0;
+
+    // fire support functionality
+    private int fsTime;
+    private FireSupportStrat currentFS = new FireSupportStrat(this);
+    private FireSupportStrat fsRadial = new FsRadial(this);
+    //private FireSupportStrat fsWave = new FsWave(this);
+
+
     GreenfootSound fire = new GreenfootSound("fire.mp3");
     public Fighter(){
         getImage().scale(50,50);
+        setFS(fsRadial); //testing
     }
     public void act() 
     {
         movement();
         time++;
+        fsTime++;
         setLivesRep();
         Bombed();
         cheatOn();
@@ -80,6 +90,9 @@ public class Fighter extends Actor
         }
         if(Greenfoot.isKeyDown("f")){
             fire();
+        }
+        if(Greenfoot.isKeyDown("d")){
+            fireSupport();
         }
         if(getWorld()!=null&&getWorld().getObjects(Fighterc.class)!=null){
             Actor fighterc = getOneIntersectingObject(Fighterc.class);
@@ -183,5 +196,16 @@ public class Fighter extends Actor
                 lifeCount.setLocation(255,10);
             }
         }
+    }
+
+    public void fireSupport(){
+        if(fsTime > 100){
+            currentFS.boom();
+            fsTime = 0;
+        }
+    }
+
+    public void setFS(FireSupportStrat fs){
+        currentFS = fs;
     }
 }
