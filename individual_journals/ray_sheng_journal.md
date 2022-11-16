@@ -7,7 +7,7 @@
 - add custom movement laser -done
 - add fire support strat 1 - done
 - add Timer mechanism for non-actor/non-world objects - done
-- add fire support strat 2
+- add fire support strat 2 - testing
 - add fs powerup 1
 - add fs powerup 2
 - change drop mechanism for enemies to accommdate new powerups

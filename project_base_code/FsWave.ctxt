@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=FsWave
+comment1.params=f
+comment1.target=FsWave(Fighter)
+comment2.params=
+comment2.target=void\ boom()
+comment3.params=
+comment3.target=void\ resume()
+comment4.params=
+comment4.target=void\ loadAmmo()
+comment5.params=
+comment5.target=void\ fire()
+numComments=6
