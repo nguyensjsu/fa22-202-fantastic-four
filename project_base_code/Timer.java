@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 public class Timer extends Actor 
 {
-    private int time = 0;
-    private int maxTime;
+    private double time = 0;
+    private double maxTime;
     private boolean started = false;
 
     private ArrayList<ITimerObserver> observers = new ArrayList<ITimerObserver>();
 
-    public Timer(int t){
+    public Timer(double t){
         setImage("invis.png");
         setLocation(1,1);
         this.maxTime = t * 60;
