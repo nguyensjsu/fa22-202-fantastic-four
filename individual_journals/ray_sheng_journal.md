@@ -16,6 +16,23 @@
 
 ### Week 2
 
+#### Scrum Report
+
+##### Tasks Worked on
+
+- Extended enemy classes to drop powerups on death
+- Refactored player object class to accommodate health pick up effect
+- Implemented health pick up feature
+
+##### Tasks to Work on Next
+
+- Design 4 more powerup features
+- Implement 2 more powerup features
+
+#### XP Core Value: Respect
+
+The team has been respectful towards one another's ideas and opinions. As we worked on the planned features and gained better understanding of the adopted codebase, ideas for those features evolved. We were respectful of each team member's expertise on his part of the codebase, and trusted one another to modify the specific implementations of the previously discussed plans. As a result, each team member's creativity was being utilized to a fuller extent, and we were even more enthusiastic than before about the additions we were making to the game.
+
 ### Week 1
 
 #### Scrum Report
