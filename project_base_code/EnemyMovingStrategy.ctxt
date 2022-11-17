@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=EnemyMovingStrategy
+comment0.text=\r\n\ Strategy\ Pattern.\r\n\r\n\ @author\r\n\ @version\r\n
+comment1.params=actor\ time
+comment1.target=void\ move(greenfoot.Actor,\ int)
+numComments=2

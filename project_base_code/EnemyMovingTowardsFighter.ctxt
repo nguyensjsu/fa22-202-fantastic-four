@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=EnemyMovingTowardsFighter
+comment1.params=actor\ time
+comment1.target=void\ move(greenfoot.Actor,\ int)
+numComments=2
