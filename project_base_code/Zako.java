@@ -1,41 +1,46 @@
-import greenfoot.*; 
-public class Zako extends Actor
+import greenfoot.*;
+public class Zako extends Enemy
 {
-    //private boolean 
+    //private boolean
     private int time;
     GreenfootSound death = new GreenfootSound("death.mp3");
+
+
     public Zako(){
         getImage().scale(35,30);
     }
-    public void act() 
+
+
+    public void act()
     {
         menuAnis();
         Bee();
         timeInc();
-        levelMovement();
+        // levelMovement();
+        strategy.move(this, time);
     }
     public void menuAnis(){
-       if(!getWorld().getObjects(Menu.class).isEmpty()){
+        if(!getWorld().getObjects(Menu.class).isEmpty()){
             Actor zako1 = getWorld().getObjects(Zako.class).get(0);
-            Actor zako2 = getWorld().getObjects(Zako.class).get(1);    
+            Actor zako2 = getWorld().getObjects(Zako.class).get(1);
             zako1.turn(3);
-            zako2.turn(-3); 
-       }
+            zako2.turn(-3);
+        }
     }
     public void Bee(){
         if(!getWorld().getObjects(Laser.class).isEmpty()){
-           Actor laser = getOneIntersectingObject(Laser.class);
+            Actor laser = getOneIntersectingObject(Laser.class);
             if(laser!=null){
                 getWorld().removeObject(laser);
                 makeBomb(getX()+10,getY());
 
                 dropPowerup(getX(), getY()); //testing
-                
+
                 death.play();
                 Fighter.score = Fighter.score +50;
-                
+
                 getWorld().removeObject(this);
-           }
+            }
         }
         if(getWorld()!=null&&getWorld().getObjects(Goei.class)!=null){
             if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
@@ -57,6 +62,7 @@ public class Zako extends Actor
             }
         }
     }
+    /*
     public void levelMovement(){
         if(Station.level==1){
             movementmodi(3,5,-3,10);
@@ -68,6 +74,7 @@ public class Zako extends Actor
     public void movementmodi(int movepov,int ym, int moveneg, int yp){
         if(Station.level>0){
             if(time==30){
+                // Move this actor the specified distance in the direction it is currently facing.
                 move(movepov);
                 if(getWorld()!=null&&getWorld().getObjects(Zako.class)!=null){
                     setLocation(getX(),getY()-ym);
@@ -80,9 +87,10 @@ public class Zako extends Actor
                     setLocation(getX(),getY()+yp);
                 }
                 getImage().scale(35,30);
-            }    
+            }
         }
     }
+    */
     public void makeBomb(int xcord, int ycord){
         Bomb bomb = new Bomb();
         getWorld().addObject(bomb,xcord,ycord);

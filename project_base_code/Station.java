@@ -59,14 +59,14 @@ public class Station extends Actor
 
         // screen size: 500x500
         int x = 0;
-        int y = 60;
+        int y = 0;
         Random random = new Random();
 
 
-        if (enemyIndex >=0 && enemyIndex < 5) {
+        if (enemyIndex >= 0 && enemyIndex < 3) {
             System.out.println("normal enemies");
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 4; i++) {
                 while (true) {
                     x = 80 + random.nextInt(400);
                     y = 60 + random.nextInt(40);
@@ -77,7 +77,7 @@ public class Station extends Actor
                 }
             }
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 3; i++) {
                 while (true) {
                     x = 80 + random.nextInt(400);
                     y = 60 + random.nextInt(40);
@@ -90,10 +90,10 @@ public class Station extends Actor
 
         }
 
-        if (enemyIndex >=5 && enemyIndex < 10) {
+        if (enemyIndex >= 3 && enemyIndex < 5) {
             System.out.println("advanced enemies");
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 4; i++) {
                 while (true) {
                     x = 80 + random.nextInt(400);
                     y = 60 + random.nextInt(40);
@@ -105,7 +105,7 @@ public class Station extends Actor
                 }
             }
 
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 3; i++) {
                 while (true) {
                     x = 80 + random.nextInt(400);
                     y = 60 + random.nextInt(40);
@@ -118,7 +118,7 @@ public class Station extends Actor
             }
         }
 
-        if (enemyIndex == 10) {
+        if (enemyIndex == 5) {
             System.out.println("Boss");
             x = 250;
             y = 70;
@@ -176,6 +176,8 @@ public class Station extends Actor
     }
     public void makeZako(int xcord,int ycord){
         Zako zako = new Zako();
+        zako.selectRandomMoveStrategy();
+
         getWorld().addObject(zako,xcord,ycord);
     }
     public void makeBoss(int xcord,int ycord){
@@ -185,6 +187,8 @@ public class Station extends Actor
     }
     public void makeGoei(int xcord,int ycord){
         Goei goei = new Goei();
+        goei.selectRandomMoveStrategy();
+
         getWorld().addObject(goei,xcord,ycord);
         goeismadeat1++;
     }
@@ -281,3 +285,5 @@ public class Station extends Actor
     */
 
 }
+
+

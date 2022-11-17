@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Enemy
+comment0.text=\r\n\ enemy,\ Zako,\ Goei\ are\ enimies.\r\n
+comment1.params=
+comment1.target=void\ selectRandomMoveStrategy()
+numComments=2

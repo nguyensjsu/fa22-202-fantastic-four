@@ -1,13 +1,13 @@
-import greenfoot.*; 
+import greenfoot.*;
 public class Boss extends Actor
 {
     public static int health=30;
-    public void act() 
+    public void act()
     {
         movement();
         timeInc();
         health();
-    }    
+    }
     boolean movecheck;
     private int time;
     public void health(){
@@ -40,7 +40,7 @@ public class Boss extends Actor
         }
     }
     public void timeInc(){
-        if(Station.level==3){
+        if(Station.level==1){
             time++;
             if(time==31){
                 time=0;
