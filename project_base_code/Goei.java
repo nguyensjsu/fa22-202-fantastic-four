@@ -1,23 +1,24 @@
-import greenfoot.*; 
+import greenfoot.*;
 //cufepez@2ether.net\
 //me280
 //dir279
-public class Goei extends Actor
+public class Goei extends Enemy
 {
     private int time;
     GreenfootSound death = new GreenfootSound("death.mp3");
     public Goei(){
         getImage().scale(35,35);
     }
-    public void act() 
+    public void act()
     {
         Butterfly();
         timeInc();
-        levelMovement();
-    }    
+        // levelMovement();
+        strategy.move(this, time);
+    }
     public void Butterfly(){
         if(getWorld()!=null&&getWorld().getObjects(Laser.class)!=null){
-           Actor laser = getOneIntersectingObject(Laser.class);
+            Actor laser = getOneIntersectingObject(Laser.class);
             if(laser!=null){
                 getWorld().removeObject(laser);
                 if(Station.level>1){
@@ -29,18 +30,18 @@ public class Goei extends Actor
                 death.play();
                 Fighter.score = Fighter.score +80;
                 getWorld().removeObject(this);
-           }
+            }
         }
         if(getWorld()!=null&&getWorld().getObjects(Goei.class)!=null){
-               if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
-                   Actor fighter = getOneIntersectingObject(Fighter.class);
-                   if(fighter!=null&&!(Station.cheaton)){
-                       getWorld().removeObject(fighter);
-                   }
-               }
+            if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
+                Actor fighter = getOneIntersectingObject(Fighter.class);
+                if(fighter!=null&&!(Station.cheaton)){
+                    getWorld().removeObject(fighter);
+                }
+            }
         }
         if(Station.gameover){
-            setImage("invis.png");            
+            setImage("invis.png");
         }
     }
     public void levelMovement(){
@@ -66,7 +67,7 @@ public class Goei extends Actor
                     setLocation(getX(),getY()+yp);
                 }
                 getImage().scale(35,30);
-            }    
+            }
         }
     }
     public void timeInc(){
