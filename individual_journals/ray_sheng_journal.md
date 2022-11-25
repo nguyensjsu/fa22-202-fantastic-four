@@ -2,17 +2,25 @@
 
 ## Weekly Scrum Report
 
+### Week 4
+
+- refactor fighter class to handle life loss using chain of responsibility
+- add shield powerup
+- add fire support strat 3: crossfire
+- add fire support 1 drop
+- add fire support 2 drop
+- add fire support 3 drop
+- add fighter state to accommodate fire support status
+- change drop mechanism for enemies to accommdate new powerups
+
+### Week 3
+
 - add fire support to fighter - done
 - add fire support base strat - done
 - add custom movement laser -done
 - add fire support strat 1 - done
 - add Timer mechanism for non-actor/non-world objects - done
-- add fire support strat 2 - testing
-- add fs powerup 1
-- add fs powerup 2
-- change drop mechanism for enemies to accommdate new powerups
-
-### Week 3
+- add fire support strat 2 - done
 
 ### Week 2
 
