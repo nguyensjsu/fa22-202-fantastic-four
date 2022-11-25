@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=EnemyLifeDecorator
+comment1.params=c
+comment1.target=EnemyLifeDecorator(EnemyLifeComponent)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=xcord\ ycord
+comment3.target=void\ makeBomb(int,\ int)
+comment4.params=x\ y
+comment4.target=void\ dropPowerup(int,\ int)
+numComments=5

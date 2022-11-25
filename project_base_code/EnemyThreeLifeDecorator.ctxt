@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=EnemyThreeLifeDecorator
+comment1.params=c
+comment1.target=EnemyThreeLifeDecorator(EnemyLifeComponent)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ actMore()
+numComments=4

@@ -8,24 +8,14 @@ public class Fighter extends Actor
     public static boolean makeReps;
     private int madeReps=0;
     public int madecheats =0;
-
-    // fire support functionality
-    private int fsTime;
-    private FireSupportStrat currentFS = new FireSupportStrat(this);
-    private FireSupportStrat fsRadial = new FsRadial(this);
-    private FireSupportStrat fsWave = new FsWave(this);
-
-
     GreenfootSound fire = new GreenfootSound("fire.mp3");
     public Fighter(){
         getImage().scale(50,50);
-        setFS(fsWave); //testing only, implement pickup later
     }
-    public void act() 
+    public void act()
     {
         movement();
         time++;
-        fsTime++;
         setLivesRep();
         Bombed();
         cheatOn();
@@ -41,41 +31,50 @@ public class Fighter extends Actor
         if(getWorld() != null){
             getWorld().showText("Level: "+String.valueOf(fighterlevel), 320, 15);
         }
-        
+
     }
-    LaserContext laserContext1 = new LaserContext(new FlighterLevel1());
-    LaserContext laserContextx = new LaserContext(new FlighterLevelx());
     public void fire(){
-        
         if(time>40){
             if(score >= 0){
-                laserContext1.executeStrategy(0, this);
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX(),getY()-38);
                 time=0;
             }
             if(score >= 700){
-                laserContextx.executeStrategy(1, this);
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-15,getY()-38);
+                getWorld().addObject(laser,getX()+15,getY()-38);
                 time=0;
             }
             if(score >= 1500){
-                laserContextx.executeStrategy(15, this);
+                Laser laser = new Laser();
+                getWorld().addObject(laser,getX()-30,getY()-38);
+                getWorld().addObject(laser,getX()+20,getY()-38);
+                getWorld().addObject(laser,getX()+50,getY()-38);
                 time=0;
-            } 
+            }
         }
         fire.play();
         if(Station.cheaton){
             if(time>1){
                 if(score >= 0){
-                    laserContext1.executeStrategy(0, this);
+                    Laser laser = new Laser();
+                    getWorld().addObject(laser,getX(),getY()-38);
                     time=0;
                 }
                 if(score >= 700){
-                    laserContextx.executeStrategy(1, this);
+                    Laser laser = new Laser();
+                    getWorld().addObject(laser,getX()-15,getY()-38);
+                    getWorld().addObject(laser,getX()+15,getY()-38);
                     time=0;
                 }
                 if(score >= 1500){
-                    laserContextx.executeStrategy(15, this);
+                    Laser laser = new Laser();
+                    getWorld().addObject(laser,getX()-30,getY()-38);
+                    getWorld().addObject(laser,getX()+20,getY()-38);
+                    getWorld().addObject(laser,getX()+50,getY()-38);
                     time=0;
-                } 
+                }
             }
         }
     }
@@ -91,13 +90,10 @@ public class Fighter extends Actor
         if(Greenfoot.isKeyDown("f")){
             fire();
         }
-        if(Greenfoot.isKeyDown("d")){
-            fireSupport();
-        }
         if(getWorld()!=null&&getWorld().getObjects(Fighterc.class)!=null){
             Actor fighterc = getOneIntersectingObject(Fighterc.class);
             if(fighterc!=null){
-                setLocation(53,getY());                
+                setLocation(53,getY());
             }
         }
         if(getX()<24){
@@ -119,7 +115,7 @@ public class Fighter extends Actor
         }
         if(Greenfoot.isKeyDown("left")){
             setLocation(getX()-left,getY());
-        }    
+        }
     }
     public void Bombed(){
         Actor bomb = getOneIntersectingObject(Bomb.class);
@@ -159,7 +155,7 @@ public class Fighter extends Actor
                     madeReps=2;
                 }
                 makeReps=false;
-             }
+            }
         }
     }
     public void setLevel(int level){
@@ -198,14 +194,18 @@ public class Fighter extends Actor
         }
     }
 
-    public void fireSupport(){
-        if(fsTime > 100){
-            currentFS.boom();
-            fsTime = 0;
+    public void decreaseLife() {
+        if(lives==3){
+            lives=2;
+            getWorld()  .getObjects(Fighterc.class).get(0).setImage("invis.png");
+            getWorld()  .getObjects(Fighterc.class).get(0).setLocation(1,1);
+        }else if(lives==2){
+            lives=1;
+            getWorld().getObjects(Fighterc.class).get(1).setImage("invis.png");
+            getWorld().getObjects(Fighterc.class).get(1).setLocation(1,1);
+        }else if(lives==1){
+            lives=0;
+            getWorld().removeObject(this);
         }
-    }
-
-    public void setFS(FireSupportStrat fs){
-        currentFS = fs;
     }
 }
