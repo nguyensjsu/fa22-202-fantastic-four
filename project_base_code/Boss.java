@@ -1,15 +1,16 @@
 import greenfoot.*;
-public class Boss extends Actor
+public class Boss extends Enemy
 {
-    public static int health=30;
+    // public static int health=30;
     public void act()
     {
-        movement();
-        timeInc();
-        health();
+        // movement();
+        // timeInc();
+        // health();
     }
-    boolean movecheck;
-    private int time;
+    // boolean movecheck;
+    // private int time;
+    /*
     public void health(){
         Actor laser = getOneIntersectingObject(Laser.class);
         if(laser!=null){
@@ -19,7 +20,11 @@ public class Boss extends Actor
             getWorld().removeObject(this);
         }
     }
+    
+    */
+   /*
     public void movement(){
+        
         if(getX()<=130){
             movecheck=false;
         }
@@ -32,6 +37,7 @@ public class Boss extends Actor
         if(movecheck){
             move(-2);
         }
+    
         if(time==30){
             makeLaser(getX()-50,getY()+75);
         }
@@ -39,6 +45,7 @@ public class Boss extends Actor
             makeBomb(getX()+50,getY()+75);
         }
     }
+    
     public void timeInc(){
         if(Station.level==1){
             time++;
@@ -47,6 +54,7 @@ public class Boss extends Actor
             }
         }
     }
+    
     public void makeBomb(int xcord, int ycord){
         Bomb bomb = new Bomb();
         getWorld().addObject(bomb,xcord,ycord);
@@ -59,4 +67,6 @@ public class Boss extends Actor
             laser.setRotation(261);
         }
     }
+    */
+
 }

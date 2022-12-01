@@ -32,8 +32,8 @@ public class EnemyMovingTowardsFighter implements EnemyMovingStrategy
         int x = actor.getX();
         int y = actor.getY();
 
-        int deltaX = 20;
-        int deltaY = 20;
+        int deltaX = 10;
+        int deltaY = 10;
 
         if (x > fighterX) {
             x -= deltaX;

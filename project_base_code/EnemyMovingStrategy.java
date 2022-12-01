@@ -3,8 +3,8 @@ import greenfoot.*;
 /**
  * Strategy Pattern.
  *
- * @author
- * @version
+ * @author  l
+ * @version  20221111
  */
 public interface EnemyMovingStrategy
 {

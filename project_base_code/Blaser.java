@@ -16,7 +16,7 @@ public class Blaser extends Actor
         }
     }
     public void goDown(){
-        if(Station.level==1){
+        if(Station.level==3){
             setLocation(getX(),getY()+(3));
         }
     }
