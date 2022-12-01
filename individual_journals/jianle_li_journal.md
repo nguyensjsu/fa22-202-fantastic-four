@@ -32,3 +32,26 @@ By discussing what members know and admire about the four features, we were ulti
 
 
 ---
+## Week 2
+Date: November 5th to November 12
+
+### Completed Tasks 
+* Modifying the stages in the game
+      * The base code advances to the next level when all enemies in the current stage are eliminated
+      * The objective is to modify it such that the enemy will continue to be produced without changing to a new stage.
+
+### Ongoing Tasks
+* Refactor current enemy moving method with strategy pattern.
+      * Three mode:
+         * enemy stay still
+         * enemy move vertically down
+         * enemy move down but toward to player (attack mode)  
+
+### Blocker
+* There is currently no any blocker on my side of implementation.
+
+### XP Value: Communication
+Through the weekly group meeting that takes place every Wednesday and the chats that take place after class on Saturdays, we are able to keep the communication environment for the overall growth of the project relatively consistent. As we continue to consistently and actively share our ideas and recommendations in each communication, not only do we have a better grasp of the code base that we adopt, but we also have a better awareness of the functions that are the responsibility of each individual member. The talent of each member of the team may be better leveraged if good communication techniques are implemented, and this will allow the game project to evolve in a smooth and seamless manner.
+
+
+---
