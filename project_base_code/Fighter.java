@@ -14,12 +14,34 @@ public class Fighter extends Actor
     private FireSupportStrat currentFS = new FireSupportStrat(this);
     private FireSupportStrat fsRadial = new FsRadial(this);
     private FireSupportStrat fsWave = new FsWave(this);
+    private FireSupportStrat fsNone = new FsNone(this);
 
+    // damage handling
+    private Shield shield;
+    private Hull hull;
+    private IDamageTarget damageChain;
+
+    // powerup implementation
+    private PuState currentPU;
+    private PuStateNone puNone = new PuStateNone();
+    private PuStateFS1 puFS1 = new PuStateFS1();
+    private PuStateFS2 puFS2 = new PuStateFS2();
+    private PuStateShield puShield = new PuStateShield();
+    private int puTimer = 0;
 
     GreenfootSound fire = new GreenfootSound("fire.mp3");
+
     public Fighter(){
         getImage().scale(50,50);
+
+        shield = new Shield(this);
+        hull = new Hull(this);
+        shield.setNext((IDamageTarget)hull);
+        damageChain = (IDamageTarget)shield;
+
         setFS(fsWave); //testing only, implement pickup later
+
+        setPuState("none");
     }
     public void act() 
     {
@@ -30,7 +52,9 @@ public class Fighter extends Actor
         Bombed();
         cheatOn();
         Fighterlevel();
+        powerUpCheck();
     }
+
     public void Fighterlevel(){
         if(score >= 700){
             fighterlevel = 2;
@@ -124,27 +148,18 @@ public class Fighter extends Actor
     public void Bombed(){
         Actor bomb = getOneIntersectingObject(Bomb.class);
         Actor blaser = getOneIntersectingObject(Blaser.class);
-        if(bomb!=null&&lives==3){
-            lives=2;
+        if(bomb != null){
             getWorld().removeObject(bomb);
-            getWorld()  .getObjects(Fighterc.class).get(0).setImage("invis.png");
-            getWorld()  .getObjects(Fighterc.class).get(0).setLocation(1,1);
-        }else if(bomb!=null&&lives==2){
-            lives=1;
-            getWorld().removeObject(bomb);
-            getWorld().getObjects(Fighterc.class).get(1).setImage("invis.png");
-            getWorld().getObjects(Fighterc.class).get(1).setLocation(1,1);
-        }else if(bomb!=null&&lives==1){
-            lives=0;
-            getWorld().removeObject(bomb);
-            getWorld().removeObject(this);
+            damageChain.takeHit();
         }
-        if(Station.level==3){
-            if(blaser!=null||bomb!=null){
-                getWorld()  .getObjects(Fighterc.class).get(0).setImage("invis.png");
-                getWorld().getObjects(Fighterc.class).get(1).setImage("invis.png");
-                getWorld().removeObject(this);
-            }
+        // Changed logic for Boss attacks
+        // Original: all boss attacks one-shot the player
+        // Modified: bomb only does 1 damage, blaser does 3
+        if(blaser != null){
+            getWorld().removeObject(blaser);
+            damageChain.takeHit();
+            if(lives > 0) damageChain.takeHit();
+            if(lives > 0) damageChain.takeHit();
         }
     }
     public void setLivesRep(){
@@ -180,6 +195,7 @@ public class Fighter extends Actor
         madecheats++;
     }
 
+    // Use public methods for increasing and decreasing life
     public void lifePlus(){
         if (lives < 3){
             lives++;
@@ -198,6 +214,28 @@ public class Fighter extends Actor
         }
     }
 
+    public void lifeMinus(){
+        if(lives == 3){
+            lives--;
+            Fighterc lifeIcon = getWorld().getObjects(Fighterc.class).get(0);
+            lifeIcon.setImage("invis.png");
+            lifeIcon.setLocation(1,1);
+        }
+        else if(lives == 2){
+            lives--;
+            Fighterc lifeIcon = getWorld().getObjects(Fighterc.class).get(1);
+            lifeIcon.setImage("invis.png");
+            lifeIcon.setLocation(1,1);
+        }
+        else if(lives == 1){
+            lives--;
+            getWorld().removeObject(this);
+        }
+    }
+
+    /***
+     * Add fire support feature
+     */
     public void fireSupport(){
         if(fsTime > 100){
             currentFS.boom();
@@ -208,4 +246,91 @@ public class Fighter extends Actor
     public void setFS(FireSupportStrat fs){
         currentFS = fs;
     }
+
+    /*** 
+     * Add chain of responsibility for taking damage
+     */
+
+    public interface IDamageTarget {
+        void takeHit();
+    }
+
+    public class Shield implements IDamageTarget{
+        private Fighter fighter;
+        public IDamageTarget next;
+        private boolean active = false;
+
+        public void activate(){
+            active = true;
+        }
+
+        public void deactivate(){
+            active = false;
+        }
+
+        public Shield(Fighter f ){
+            this.fighter = f;
+        }
+
+        public void setNext(IDamageTarget n){
+            this.next = n;
+        }
+        public void takeHit(){
+            if(!active){
+                next.takeHit();
+            }
+        }
+
+    }
+
+    public class Hull implements IDamageTarget{
+        private Fighter fighter;
+
+        public Hull(Fighter f ){
+            this.fighter = f;
+        }
+
+        public void takeHit(){
+            this.fighter.lifeMinus();
+        }
+    }
+
+    /***
+     * Add power up states to enable powerup features
+     */
+    public void setPuState(String arg){
+        switch(arg) {
+            case "none":
+                currentPU = puNone;
+                break;
+            case "fsRadial":
+                currentPU = puFS1;
+                break;
+            case "fsWave":
+                currentPU = puFS2;
+                break;
+            case "shield":
+                currentPU = puShield;
+                break;
+            default:
+                currentPU = puNone;
+        }
+
+        currentPU.activate();
+    }
+
+    public void setPuTimer(int seconds){
+        this.puTimer = seconds * 60;
+    }
+
+    private void powerUpCheck(){
+        if(puTimer == 1){
+            setPuState("none");
+        }
+        if(puTimer > 0){
+            puTimer--;
+        }
+    }
 }
+
+

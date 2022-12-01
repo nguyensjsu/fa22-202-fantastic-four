@@ -1,17 +1,28 @@
 # Ray Sheng Journal
 
+## Note:
+- problem: no more new enemies after boss fight
+- problem: when player is killed in boss fight, boss still moves and shoots in game over screen
+
 ## Weekly Scrum Report
 
 ### Week 4
 
-- refactor fighter class to handle life loss using chain of responsibility
-- add shield powerup
-- add fire support strat 3: crossfire
+- refactor fighter class to handle life loss using chain of responsibility: 2 hours
+- add fighter powerup states to accommodate fire support status: 2 hours
+- apply State pattern in fighter behavior code to handle fighter powerup status: 1 hour
+
+- add fire support strat 0: none
 - add fire support 1 drop
 - add fire support 2 drop
-- add fire support 3 drop
-- add fighter state to accommodate fire support status
+- add shield powerup drop
 - change drop mechanism for enemies to accommdate new powerups
+
+- add sound effect for fire support strat 2
+- change sprites for powered up fighter
+
+- randomize fire support 2 missile starting x values
+- add fire support strat 3: crossfire - tabled for now, implement if there is time later
 
 ### Week 3
 
