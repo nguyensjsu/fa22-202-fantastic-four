@@ -4,6 +4,7 @@
 ## Table of Contents
 - [Week 1](#Week-1)
 - [Week 2](#Week-2)
+- [Week 3](#Week-3)
 ---
 ## Week 1 
 Date: October 29th to November 4th
@@ -33,7 +34,7 @@ By discussing what members know and admire about the four features, we were ulti
 
 ---
 ## Week 2
-Date: November 5th to November 12
+Date: November 5th to November 12th
 
 ### Completed Tasks 
 * Modifying the stages in the game
@@ -55,3 +56,25 @@ Through the weekly group meeting that takes place every Wednesday and the chats 
 
 
 ---
+## Week 3
+Date: November 12th to November 19
+
+### Completed Tasks
+* Refactor current enemy moving method with strategy pattern.
+  * Three mode:
+  * enemy stay still
+  * enemy move vertically down
+  * enemy move down but toward to player (attack mode)
+
+### Ongoing Tasks
+* Refactoring current enemy life designing
+  * Let's break down our foes into three distinct groups by using the decorator pattern. The standard foes each have one life (meaning that they can only consume one bullet), the elite foes have two lives (meaning that they can consume two bullets), and the bosses have many lives (can eat more bullets)
+
+### Blocker
+* There is currently no any blocker on my side of implementation.
+
+### XP Value: Communication
+This week will serve as a test to see how beneficial it is for agile teams to communicate successfully. The team successfully proposes certain issues that are present in the current project as well as solutions to those bugs during their weekly zoom meetings and via chat. Ray also provided some suggestions for upcoming features, including some intriguing suggestions for player aircraft props. Additionally, everyone spoke on whether or not it would be possible to implement this feature, as well as other related topics. time, it is planned to enhance the relevant functions and requirements of the whole project, to perform thorough testing, and so on. Additionally, it is planned to have more frequent meetings as the meeting sprint is reaching its final week.
+
+---
+
