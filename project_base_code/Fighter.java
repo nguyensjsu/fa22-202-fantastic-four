@@ -10,39 +10,56 @@ public class Fighter extends Actor
     public int madecheats =0;
 
     // fire support functionality
-    private int fsTime;
-    private FireSupportStrat currentFS = new FireSupportStrat(this);
-    private FireSupportStrat fsRadial = new FsRadial(this);
-    private FireSupportStrat fsWave = new FsWave(this);
-    private FireSupportStrat fsNone = new FsNone(this);
+    protected int fsTime;
+    protected FireSupportStrat currentFS;
+    protected FireSupportStrat fsRadial;
+    protected FireSupportStrat fsWave;
+    protected FireSupportStrat fsNone;
 
     // damage handling
-    private Shield shield;
-    private Hull hull;
-    private IDamageTarget damageChain;
+    protected Shield shield;
+    protected Hull hull;
+    protected IDamageTarget damageChain;
 
     // powerup implementation
-    private PuState currentPU;
-    private PuStateNone puNone = new PuStateNone();
-    private PuStateFS1 puFS1 = new PuStateFS1();
-    private PuStateFS2 puFS2 = new PuStateFS2();
-    private PuStateShield puShield = new PuStateShield();
-    private int puTimer = 0;
+    protected PuState currentPU;
+    protected PuStateNone puNone;
+    protected PuStateFS1 puFS1;
+    protected PuStateFS2 puFS2;
+    protected PuStateShield puShield;
+    protected int puTimer;
 
     GreenfootSound fire = new GreenfootSound("fire.mp3");
 
     public Fighter(){
         getImage().scale(50,50);
 
-        shield = new Shield(this);
-        hull = new Hull(this);
-        shield.setNext((IDamageTarget)hull);
-        damageChain = (IDamageTarget)shield;
+        setParams();
 
         setFS(fsWave); //testing only, implement pickup later
 
         setPuState("none");
     }
+
+    private void setParams(){
+        this.shield = new Shield(this);
+        this.hull = new Hull(this);
+        this.shield.setNext((IDamageTarget)hull);
+        this.damageChain = (IDamageTarget)shield;
+
+        fsTime = 0;
+        currentFS = new FireSupportStrat(this);
+        fsRadial = new FsRadial(this);
+        fsWave = new FsWave(this);
+        fsNone = new FireSupportStrat(this);
+
+        puNone = new PuStateNone(this);
+        puFS1 = new PuStateFS1(this);
+        puFS2 = new PuStateFS2(this);
+        puShield = new PuStateShield(this);
+        puTimer = 0;
+    }
+
     public void act() 
     {
         movement();
@@ -150,16 +167,16 @@ public class Fighter extends Actor
         Actor blaser = getOneIntersectingObject(Blaser.class);
         if(bomb != null){
             getWorld().removeObject(bomb);
-            damageChain.takeHit();
+            takeHit();
         }
         // Changed logic for Boss attacks
         // Original: all boss attacks one-shot the player
         // Modified: bomb only does 1 damage, blaser does 3
         if(blaser != null){
             getWorld().removeObject(blaser);
-            damageChain.takeHit();
-            if(lives > 0) damageChain.takeHit();
-            if(lives > 0) damageChain.takeHit();
+            takeHit();
+            if(lives > 0) takeHit();
+            if(lives > 0) takeHit();
         }
     }
     public void setLivesRep(){
@@ -251,49 +268,7 @@ public class Fighter extends Actor
      * Add chain of responsibility for taking damage
      */
 
-    public interface IDamageTarget {
-        void takeHit();
-    }
-
-    public class Shield implements IDamageTarget{
-        private Fighter fighter;
-        public IDamageTarget next;
-        private boolean active = false;
-
-        public void activate(){
-            active = true;
-        }
-
-        public void deactivate(){
-            active = false;
-        }
-
-        public Shield(Fighter f ){
-            this.fighter = f;
-        }
-
-        public void setNext(IDamageTarget n){
-            this.next = n;
-        }
-        public void takeHit(){
-            if(!active){
-                next.takeHit();
-            }
-        }
-
-    }
-
-    public class Hull implements IDamageTarget{
-        private Fighter fighter;
-
-        public Hull(Fighter f ){
-            this.fighter = f;
-        }
-
-        public void takeHit(){
-            this.fighter.lifeMinus();
-        }
-    }
+    
 
     /***
      * Add power up states to enable powerup features
@@ -330,6 +305,10 @@ public class Fighter extends Actor
         if(puTimer > 0){
             puTimer--;
         }
+    }
+
+    public void takeHit(){
+        damageChain.takeHit();
     }
 }
 

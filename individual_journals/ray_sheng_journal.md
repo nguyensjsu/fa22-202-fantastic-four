@@ -1,5 +1,29 @@
 # Ray Sheng Journal
 
+## Credit
+
+<a href="https://www.flaticon.com/free-icons/zeus" title="zeus icons">Zeus icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/poseidon" title="poseidon icons">Poseidon icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/shield" title="shield icons">Shield icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/bomb" title="bomb icons">Bomb icons created by Freepik - Flaticon</a>
+
+powerdown sound by [leviclaassen](https://freesound.org/people/leviclaassen/)
+
+explode sound by [jalastram](https://freesound.org/people/jalastram/)
+
+firesupport sound by [EminYILDIRIM/](https://freesound.org/people/EminYILDIRIM/)
+
+shield sound by [OwlStorm](https://freesound.org/people/OwlStorm/)
+
+powerup sound by [Eschwabe3](https://freesound.org/people/Eschwabe3/)
+
+heal sound by [taikodrum](https://freesound.org/people/taikodrum/)
+
+
+
 ## Note:
 - problem: no more new enemies after boss fight
 - problem: when player is killed in boss fight, boss still moves and shoots in game over screen
@@ -11,18 +35,16 @@
 - refactor fighter class to handle life loss using chain of responsibility: 2 hours
 - add fighter powerup states to accommodate fire support status: 2 hours
 - apply State pattern in fighter behavior code to handle fighter powerup status: 1 hour
+- find and create graphic and sound resources for powerup effects - 2 hours
 
-- add fire support strat 0: none
-- add fire support 1 drop
-- add fire support 2 drop
-- add shield powerup drop
-- change drop mechanism for enemies to accommdate new powerups
+- add fire support 1, fire support 2, and shield drops - 0.5 hour
+- change drop mechanism for enemies to accommdate new powerups - 2 hours
 
 - add sound effect for fire support strat 2
-- change sprites for powered up fighter
+
+- change sprites for powered up fighter - 0.5 hour
 
 - randomize fire support 2 missile starting x values
-- add fire support strat 3: crossfire - tabled for now, implement if there is time later
 
 ### Week 3
 

@@ -34,7 +34,7 @@ public class Zako extends Enemy
                 getWorld().removeObject(laser);
                 makeBomb(getX()+10,getY());
 
-                dropPowerup(getX(), getY()); //testing
+                dropPowerup(); 
 
                 death.play();
                 Fighter.score = Fighter.score +50;
@@ -46,7 +46,8 @@ public class Zako extends Enemy
             if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
                 Actor fighter = getOneIntersectingObject(Fighter.class);
                 if(fighter!=null&&!(Station.cheaton)){
-                    getWorld().removeObject(fighter);
+                    Fighter f = (Fighter)fighter;
+                    f.takeHit();
                 }
             }
             if(Station.gameover){
@@ -96,8 +97,10 @@ public class Zako extends Enemy
         getWorld().addObject(bomb,xcord,ycord);
     }
 
+    /*
     public void dropPowerup(int x, int y){
         PowerupLife pu = new PowerupLife();
         getWorld().addObject(pu, x, y);
     }
+    */
 }

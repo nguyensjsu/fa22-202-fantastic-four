@@ -4,12 +4,9 @@ public abstract class PuState implements IPowerupState{
 
     protected Fighter fighter;
 
-    public PuState(Fighter f){
-        this.fighter = f;
-    }
+    public abstract void activate();
 
-    public abstract activate();
-
+    /*)
     public void expire(){
         this.fighter.setPuState("none");
     }
@@ -25,4 +22,5 @@ public abstract class PuState implements IPowerupState{
     public void pickupShield(){
         this.fighter.setPuState("shield");
     }
+    */
 }
