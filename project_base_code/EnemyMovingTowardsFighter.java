@@ -3,7 +3,7 @@ import java.util.*;
 
 public class EnemyMovingTowardsFighter implements EnemyMovingStrategy
 {
-    public void move(Actor actor, int time) {
+    public void move(Actor actor, int time, int speed) {
         if(Station.level == 0) {
             return;
         }
@@ -32,8 +32,8 @@ public class EnemyMovingTowardsFighter implements EnemyMovingStrategy
         int x = actor.getX();
         int y = actor.getY();
 
-        int deltaX = 10;
-        int deltaY = 10;
+        int deltaX = 10 * speed;
+        int deltaY = 10 * speed;
 
         if (x > fighterX) {
             x -= deltaX;

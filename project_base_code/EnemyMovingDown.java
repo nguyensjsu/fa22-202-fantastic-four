@@ -9,11 +9,11 @@ import greenfoot.*;
 public class EnemyMovingDown implements EnemyMovingStrategy
 {
 
-    public void move(Actor actor, int time) {
-        int movepov = 3;
-        int ym = 5 * 2;
-        int moveneg = -3;
-        int yp = 10 * 2;
+    public void move(Actor actor, int time, int speed) {
+        int movepov = 3 * speed;
+        int ym = 5 * 2 * speed;
+        int moveneg = -3 * speed;
+        int yp = 10 * 2 * speed;
 
         if(Station.level>0){
             if(time==30){

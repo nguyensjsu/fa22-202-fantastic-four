@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.target=EnemyLifeDecorator
-comment1.params=c
-comment1.target=EnemyLifeDecorator(EnemyLifeComponent)
-comment2.params=
-comment2.target=void\ act()
-comment3.params=xcord\ ycord
-comment3.target=void\ makeBomb(int,\ int)
-comment4.params=x\ y
-comment4.target=void\ dropPowerup(int,\ int)
-numComments=5
+comment1.params=speed
+comment1.target=void\ setSpeed(int)
+comment2.params=c
+comment2.target=EnemyLifeDecorator(EnemyLifeComponent)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=xcord\ ycord
+comment4.target=void\ makeBomb(int,\ int)
+comment5.params=x\ y
+comment5.target=void\ dropPowerup(int,\ int)
+numComments=6

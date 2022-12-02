@@ -3,7 +3,7 @@ import greenfoot.*;
 public class BossMovingStrategy implements EnemyMovingStrategy
 {
     boolean movecheck;
-    public void move(Actor actor, int time) {
+    public void move(Actor actor, int time, int speed) {
         if(actor.getX()<=130){
             movecheck=false;
         }

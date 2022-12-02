@@ -8,5 +8,5 @@ import greenfoot.*;
  */
 public interface EnemyMovingStrategy
 {
-    void move(Actor actor, int time);
+    void move(Actor actor, int time, int speed);
 }
