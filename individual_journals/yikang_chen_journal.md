@@ -54,7 +54,8 @@ Based on the feedback of Ray, we plan to use the same strategy of laser level-up
 
 #### What am I planning to work on next?
 
-- Implemented strategy design pattern in the main laser
+- Implement strategy design pattern in the main laser
+- Add the different directions of the left laser and the right laser
 
 #### What tasks are blocked waiting on another team member?
 
@@ -62,7 +63,7 @@ Based on the feedback of Ray, we plan to use the same strategy of laser level-up
 
 #### XP Core Value: Feedback
 
-
+Based on the feedback from Yiyang, the straight direction of the laser is too boring. We can add different directions of the laser, which will bring more interest to the fighter.
 
 
 
@@ -71,6 +72,7 @@ Based on the feedback of Ray, we plan to use the same strategy of laser level-up
 #### What tasks did I work on / complete?
 
 - Implemented strategy design pattern in the main laser
+- Added the different directions of the left laser and the right laser
 
 #### What am I planning to work on next?
 
