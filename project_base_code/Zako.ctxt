@@ -6,15 +6,4 @@ comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ menuAnis()
-<<<<<<< HEAD
 numComments=4
-=======
-comment4.params=
-comment4.target=void\ Bee()
-comment5.params=
-comment5.target=void\ timeInc()
-comment6.params=xcord\ ycord
-comment6.target=void\ makeBomb(int,\ int)
-comment6.text=\r\n\ \ \ \ public\ void\ levelMovement(){\r\n\ \ \ \ \ \ \ \ if(Station.level\=\=1){\r\n\ \ \ \ \ \ \ \ \ \ \ \ movementmodi(3,5,-3,10);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ if(Station.level\=\=2){\r\n\ \ \ \ \ \ \ \ \ \ \ \ movementmodi(5,6,-5,15);\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ public\ void\ movementmodi(int\ movepov,int\ ym,\ int\ moveneg,\ int\ yp){\r\n\ \ \ \ \ \ \ \ if(Station.level>0){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(time\=\=30){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Move\ this\ actor\ the\ specified\ distance\ in\ the\ direction\ it\ is\ currently\ facing.\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move(movepov);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(getWorld()\!\=null&&getWorld().getObjects(Zako.class)\!\=null){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX(),getY()-ym);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getImage().scale(40,35);\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(time\=\=60){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ move(moveneg);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(getWorld()\!\=null&&getWorld().getObjects(Zako.class)\!\=null){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLocation(getX(),getY()+yp);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getImage().scale(35,30);\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
-numComments=7
->>>>>>> powerup

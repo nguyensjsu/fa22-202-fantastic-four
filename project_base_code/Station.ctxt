@@ -12,7 +12,7 @@ comment13.params=
 comment13.target=void\ level1Truths()
 comment14.params=
 comment14.target=void\ gameOver()
-comment14.text=\r\n\ \ \ \ public\ void\ changeLevel(){\r\n\ \ \ \ \ \ \ \ if(level\=\=1){\r\n\ \ \ \ \ \ \ \ \ \ \ \ if((getWorld().getObjects(Zako.class).isEmpty())&&(getWorld().getObjects(Goei.class).isEmpty())\ ){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeGoei2\=true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ level\=2;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeZako1\=true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeGoei1\=true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ goeismadeat1\=0;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ slevel.play();\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n
+comment14.text=\n\ \ \ \ public\ void\ changeLevel(){\n\ \ \ \ \ \ \ \ if(level\=\=1){\n\ \ \ \ \ \ \ \ \ \ \ \ if((getWorld().getObjects(Zako.class).isEmpty())&&(getWorld().getObjects(Goei.class).isEmpty())\ ){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeGoei2\=true;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ level\=2;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeZako1\=true;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ makeGoei1\=true;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ goeismadeat1\=0;\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ slevel.play();\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=

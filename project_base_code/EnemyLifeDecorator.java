@@ -39,8 +39,7 @@ public class EnemyLifeDecorator extends Actor implements EnemyLifeComponent
         Bomb bomb = new Bomb();
         getWorld().addObject(bomb,xcord,ycord);
     }
-    protected void dropPowerup(int x, int y){
-        PowerupLife pu = new PowerupLife();
-        getWorld().addObject(pu, x, y);
+    public void dropPowerup(){
+        LootManager.getInstance().dropLoot(this);
     }
 }

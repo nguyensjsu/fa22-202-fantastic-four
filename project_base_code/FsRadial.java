@@ -16,6 +16,7 @@ public class FsRadial extends FireSupportStrat implements ITimerObserver
 
     @Override
     public void boom(){
+        resume();
         /*
         generateCoords();
         this.container = new Box("big_bomb.png");
@@ -24,6 +25,7 @@ public class FsRadial extends FireSupportStrat implements ITimerObserver
         World w = this.fighter.getWorld();
         w.addObject(this.container, x, 0);
         */
+        /*
         wail.play();
         
         World w = this.fighter.getWorld();
@@ -31,6 +33,7 @@ public class FsRadial extends FireSupportStrat implements ITimerObserver
         t.addObserver(this);
         w.addObject(t,1,1);
         t.start();
+        */
     }
 
 

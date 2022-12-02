@@ -2,12 +2,4 @@
 comment0.target=PuState
 comment1.params=
 comment1.target=void\ activate()
-comment2.params=
-comment2.target=void\ expire()
-comment3.params=
-comment3.target=void\ pickupFS1()
-comment4.params=
-comment4.target=void\ pickupFS2()
-comment5.params=
-comment5.target=void\ pickupShield()
-numComments=6
+numComments=2

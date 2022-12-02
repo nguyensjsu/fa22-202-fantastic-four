@@ -138,6 +138,9 @@ public class Fighter extends Actor
         if(Greenfoot.isKeyDown("f")){
             fire();
         }
+        if(Greenfoot.isKeyDown("d")){
+            fireSupport();
+        }
         if(getWorld()!=null&&getWorld().getObjects(Fighterc.class)!=null){
             Actor fighterc = getOneIntersectingObject(Fighterc.class);
             if(fighterc!=null){

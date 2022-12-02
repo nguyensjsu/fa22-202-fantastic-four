@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EnemyMovingDown
-comment0.text=\r\n\ \ enemy\ move\ downwards.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ \ enemy\ move\ downwards.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=actor\ time\ speed
 comment1.target=void\ move(greenfoot.Actor,\ int,\ int)
 numComments=2

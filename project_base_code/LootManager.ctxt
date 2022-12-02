@@ -8,6 +8,4 @@ comment3.params=dropper
 comment3.target=void\ dropLoot(greenfoot.Actor)
 comment4.params=
 comment4.target=Powerup\ selectLoot()
-comment5.params=max
-comment5.target=int\ randomRoll(int)
-numComments=6
+numComments=5

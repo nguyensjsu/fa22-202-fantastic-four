@@ -5,11 +5,10 @@ comment1.target=FsRadial(Fighter)
 comment2.params=
 comment2.target=void\ boom()
 comment3.params=
-comment3.target=void\ act()
+comment3.target=void\ resume()
+comment3.text=\n\ \ \ \ public\ void\ act(){\n\ \ \ \ \ \ \ \ if(this.container.getY()\ \=\=\ y\ &&\ this.fighter\ \!\=\ null){\n\ \ \ \ \ \ \ \ \ \ \ \ World\ w\ \=\ this.fighter.getWorld();\n\ \ \ \ \ \ \ \ \ \ \ \ w.removeObject(this.container);\n\ \ \ \ \ \ \ \ \ \ \ \ resume();\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
 comment4.params=
-comment4.target=void\ resume()
+comment4.target=void\ generateCoords()
 comment5.params=
-comment5.target=void\ generateCoords()
-comment6.params=
-comment6.target=void\ addShraps()
-numComments=7
+comment5.target=void\ addShraps()
+numComments=6
