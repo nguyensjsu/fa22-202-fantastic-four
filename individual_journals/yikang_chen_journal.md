@@ -17,7 +17,7 @@
 
 #### XP Core Value: Feedback
 
-When we initialize our project, everyone is willing to receive others' feedback. For example, we have to schedule a meeting to discuss how to design and implement specific features, like how to deploy this project and who is responsible for which part where everyone is going to finish the corresponding part, then give feedback to others
+When we initialize our project, everyone is willing to receive others' feedback. For example, we have to schedule a meeting to discuss how to design and implement specific features, like how to deploy this project and who is responsible for which part where everyone is going to finish the corresponding part, then give feedback to others.
 
 
 
@@ -38,6 +38,10 @@ When we initialize our project, everyone is willing to receive others' feedback.
 
 #### XP Core Value: Feedback
 
+In the EXP part, given the feedback of Ray, we don't have to implement another system of level. We can just use the score to represent the current level. In this way, the left laser and the right laser can be changed with the current score.
+
+Based on the feedback of Ray, we plan to use the same strategy of laser level-up, so I must keep my code of laser level-up reusable.
+
 
 
 ## Week3
@@ -57,6 +61,8 @@ When we initialize our project, everyone is willing to receive others' feedback.
 - None
 
 #### XP Core Value: Feedback
+
+
 
 
 
