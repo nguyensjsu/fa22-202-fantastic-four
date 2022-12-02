@@ -84,3 +84,4 @@ Based on the feedback from Yiyang, the straight direction of the laser is too bo
 
 #### XP Core Value: Feedback
 
+Finished all features of lasers, given the feedback of teammates, this is perfect version for the laser part. But if there is any feature calls this laser function, maybe some codes need to change to adapt it.
