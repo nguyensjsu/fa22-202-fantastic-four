@@ -5,7 +5,7 @@
 | Name          |  XP Core Value  |
 | ------------- | --------------- |
 | Yikang Chen   |                 |
-| Jianle Li     |                 |
+| Jianle Li     | Communication   |
 | Ray Sheng     |                 |
 | Yiyang Yin    |                 |
 
@@ -77,6 +77,22 @@ Yiyang
 * Yikang Chen
 
 * Jianle Li
+  * In this project, I am primarily responsible for functions pertaining to enemies and have mostly enhanced three features:
+    1) The enemies' appearances has transitioned from a `one-time appearance` to a `steady appearance`. 
+    2) The enemies will select its way of movement at random toward to player. It can choose three different movement methods, which are: `Stay still(default)`, `Move Vertically Down` and `Move Toward The Player`. (Strategy pattern is in used here.)
+       * `Strategy Pattern `
+         * For each movement method (or algorithm), we use a separate class for encapsulation. These algorithms are also interchangeable. So it is very suitable to use strategy pattern. This pattern makes the program very scalable. If we suddenly want to add a new movement method, we only need to add a new class.
+         * Class Diagram for this will be show as following：![strategy pattern](images/EnemyMovingStrategy.png 'strategy pattern')
+    3) Refactoring enemies lives implementation. Allowing enemies to `upgrade its level` (More lives)  (Decorator pattern is in used here.)
+       * `Decorator Pattern`
+         * The original enemy, whether it is Goei or Zako, has a health value of 1 and will disappear after being hit by a laser.
+         In order to strengthen/extend the functions related to enemy life, we use the decorator pattern to divide the enemy into three levels:`Normal Enemy One Life`, `Elite Enemies Two Lives` and `Boss multiple lives`.
+         * In different stages of the game, there will be different levels of enemies. That is to say, when creating an enemy object, use different life decorators to decorate the enemy object.
+           Use `EnemyOneLifeDecorator` for normal enemies, `EnemyTwoLifeDecorator` for elite enemies, and `EnemyThreeLifeDecorator` for bosses.
+         * Class Diagram for this will be show as following：![decorator pattern](images/EnemyLifeDecorator.png 'decorator pattern')
+    4) (Pending work) By reading the current score of the player, the monster may be upgraded further (an upgraded version realized by the third features above).
+       1) Each 500/1000 score is separated into several interval. Each interval has a unique assortment of enemies. The number of enemies at each interval grows, as does their speed. 
+       2) Before reaching a specific score, the boss will not emerge.
 
 * Ray Sheng
 
