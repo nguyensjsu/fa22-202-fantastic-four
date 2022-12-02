@@ -49,5 +49,7 @@ public class Enemy extends Actor implements EnemyLifeComponent
     }    
     */
 
-
+    public void dropPowerup(){
+        LootManager.getInstance().dropLoot(this);
+    }
 }

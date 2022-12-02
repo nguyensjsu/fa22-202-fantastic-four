@@ -49,6 +49,7 @@ public class EnemyThreeLifeDecorator extends EnemyLifeDecorator
                     }
                     getWorld().removeObject(laser);
                     if (life == 0) {
+                        dropPowerup();
                         getWorld().removeObject(this);
                     }
                 }
@@ -59,7 +60,7 @@ public class EnemyThreeLifeDecorator extends EnemyLifeDecorator
             Actor fighter = getOneIntersectingObject(Fighter.class);
             if(fighter!=null&&!(Station.cheaton)){
                 // getWorld().removeObject(fighter);
-                ((Fighter)fighter).decreaseLife();
+                ((Fighter)fighter).takeHit();
                 // getWorld().removeObject(this);
             }
         }

@@ -49,7 +49,7 @@ public class EnemyTwoLifeDecorator extends EnemyLifeDecorator
 
                         makeBomb(getX()+10,getY());
 
-                        dropPowerup(getX(), getY()); //testing
+                        dropPowerup();
 
                         death.play();
                         Fighter.score = Fighter.score + 50 + 50;
@@ -64,7 +64,7 @@ public class EnemyTwoLifeDecorator extends EnemyLifeDecorator
             Actor fighter = getOneIntersectingObject(Fighter.class);
             if(fighter!=null&&!(Station.cheaton)){
                 // getWorld().removeObject(fighter);
-                ((Fighter)fighter).decreaseLife();
+                ((Fighter)fighter).takeHit();
                 getWorld().removeObject(this);
             }
         }

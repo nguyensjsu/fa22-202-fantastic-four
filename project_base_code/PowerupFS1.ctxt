@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PowerupFS1
+comment1.params=
+comment1.target=PowerupFS1()
+comment2.params=f
+comment2.target=void\ activate(Fighter)
+comment3.params=
+comment3.target=void\ move()
+comment4.params=
+comment4.target=void\ changeDirection()
+comment5.params=
+comment5.target=void\ setDirection()
+numComments=6

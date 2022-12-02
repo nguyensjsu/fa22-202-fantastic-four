@@ -27,7 +27,7 @@ public class Goei extends Enemy
                     makeBomb(getX()+10,getY());
                 }
 
-                dropPowerup(getX(), getY()); // testing
+                dropPowerup();
 
                 death.play();
                 Fighter.score = Fighter.score +80;
@@ -36,12 +36,13 @@ public class Goei extends Enemy
         }
         
         if(getWorld()!=null&&getWorld().getObjects(Goei.class)!=null){
-               if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
-                   Actor fighter = getOneIntersectingObject(Fighter.class);
-                   if(fighter!=null&&!(Station.cheaton)){
-                       getWorld().removeObject(fighter);
-                   }
-               }
+            if(getWorld()!=null&&getWorld().getObjects(Fighter.class)!=null){
+                Actor fighter = getOneIntersectingObject(Fighter.class);
+                if(fighter!=null&&!(Station.cheaton)){
+                    Fighter f = (Fighter)fighter;
+                    f.takeHit();
+                }
+            }
         }
         if(Station.gameover){
             setImage("invis.png");            
@@ -97,7 +98,7 @@ public class Goei extends Enemy
         }
     }
 
-
+    /*
     public void dropPowerup(int x, int y){
         PowerupLife pu = new PowerupLife();
         getWorld().addObject(pu, x, y);

@@ -20,7 +20,7 @@ public class FsWave extends FireSupportStrat implements ITimerObserver
     }
 
     public void resume(){
-        if(ammo.size() > 0){
+        if(ammo.size() > 0 && this.fighter != null){
             World w = this.fighter.getWorld();
 
             LaserCustom l = ammo.get(0);
@@ -42,7 +42,8 @@ public class FsWave extends FireSupportStrat implements ITimerObserver
         }
 
         for(int i = 0; i < ammo.size(); i++ ){
-            ammo.get(i).setStart( (distance*i) + offset , 500);
+            int wobble = Greenfoot.getRandomNumber(distance / 3);
+            ammo.get(i).setStart( (distance*i) + offset + wobble , 500);
             ammo.get(i).setVelocity(0, this.speed);
         }
         

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=PowerupShield
+comment1.params=
+comment1.target=PowerupShield()
+comment2.params=f
+comment2.target=void\ activate(Fighter)
+numComments=3

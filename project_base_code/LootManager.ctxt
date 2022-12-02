@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LootManager
+comment1.params=
+comment1.target=LootManager()
+comment2.params=
+comment2.target=LootManager\ getInstance()
+comment3.params=dropper
+comment3.target=void\ dropLoot(greenfoot.Actor)
+comment4.params=
+comment4.target=Powerup\ selectLoot()
+comment5.params=max
+comment5.target=int\ randomRoll(int)
+numComments=6
