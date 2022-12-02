@@ -6,9 +6,9 @@ import greenfoot.*;
  * @author
  * @version
  */
-public class EnemyNotMoving implements EnemyMovingStrategy
+public class EnemyNotMoving implements EnemyMovingStrategy 
 {
-    public void move(Actor actor, int time) {
+    public void move(Actor actor, int time, int speed) {
         return ;
     }
 }

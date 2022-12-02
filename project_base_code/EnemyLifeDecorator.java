@@ -3,6 +3,11 @@ public class EnemyLifeDecorator extends Actor implements EnemyLifeComponent
 {
     protected EnemyLifeComponent component;
     int time = 0;
+    private int speed = 1;
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 
     public EnemyLifeDecorator(EnemyLifeComponent c) {
         component = c;
@@ -27,7 +32,7 @@ public class EnemyLifeDecorator extends Actor implements EnemyLifeComponent
         if(time==61){
             time=0;
         }
-        ((Enemy)component).getStrategy().move(this, time);
+        ((Enemy)component).getStrategy().move(this, time, speed);
     }
 
     protected void makeBomb(int xcord, int ycord){
