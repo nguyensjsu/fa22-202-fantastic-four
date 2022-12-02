@@ -2,12 +2,12 @@
 
 ## Team members
 
-| Name          |  XP Core Value  |
-| ------------- | --------------- |
-| Yikang Chen   |                 |
-| Jianle Li     | Communication   |
-| Ray Sheng     |                 |
-| Yiyang Yin    |                 |
+| Name        | XP Core Value |
+| ----------- | ------------- |
+| Yikang Chen | Feedback      |
+| Jianle Li   | Communication |
+| Ray Sheng   |               |
+| Yiyang Yin  |               |
 
 ## About the project
 ### Description 
@@ -62,7 +62,7 @@ Ray
 * Sprint Task Sheet
 * Burn down chart
 * Weekly Scrum Task Board
-Yiyang
+  Yiyang
    * Week 1
 
    * Week 2
