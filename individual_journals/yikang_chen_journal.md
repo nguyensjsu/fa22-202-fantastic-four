@@ -2,9 +2,9 @@
 
 #### What tasks did I work on / complete?
 
-- Added first task in Kanban Board
+- Added the first task in Kanban Board
 - Initialized Journals and first Journal Report
-- Setting up the project at the local environment
+- Setting up the project in the local environment
 
 #### What am I planning to work on next?
 
@@ -17,7 +17,7 @@
 
 #### XP Core Value: Feedback
 
-
+When we initialize our project, everyone is willing to receive others' feedback. For example, we have to schedule a meeting to discuss how to design and implement specific features, like how to deploy this project and who is responsible for which part where everyone is going to finish the corresponding part, then give feedback to others
 
 
 
@@ -30,7 +30,7 @@
 
 #### What am I planning to work on next?
 
-- Implement the function with strategy design pattern
+- Implement the function with a strategy design pattern
 
 #### What tasks are blocked waiting on another team member?
 
@@ -50,7 +50,7 @@
 
 #### What am I planning to work on next?
 
-- Implemented strategy design pattern in main laser
+- Implemented strategy design pattern in the main laser
 
 #### What tasks are blocked waiting on another team member?
 
@@ -64,7 +64,7 @@
 
 #### What tasks did I work on / complete?
 
-- Implemented strategy design pattern in main laser
+- Implemented strategy design pattern in the main laser
 
 #### What am I planning to work on next?
 
