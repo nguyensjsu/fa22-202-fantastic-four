@@ -14,6 +14,7 @@ public class PuStateFS2 extends PuState{
         sound_effect.play();
         this.fighter.shield.deactivate();
         this.fighter.setFS(this.fighter.fsWave);
+        //System.out.println("FS2: fighter set fs wave");
         this.fighter.setPuTimer(6);
     }
 

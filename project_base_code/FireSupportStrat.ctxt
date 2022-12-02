@@ -4,4 +4,6 @@ comment1.params=f
 comment1.target=FireSupportStrat(Fighter)
 comment2.params=
 comment2.target=void\ boom()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

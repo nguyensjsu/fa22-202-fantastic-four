@@ -62,6 +62,7 @@ public class Fighter extends Actor
     {
         movement();
         time++;
+        fsTime++;
         setLivesRep();
         Bombed();
         cheatOn();
@@ -139,6 +140,7 @@ public class Fighter extends Actor
             fire();
         }
         if(Greenfoot.isKeyDown("d")){
+            //System.out.println("pressing D");
             fireSupport();
         }
         if(getWorld()!=null&&getWorld().getObjects(Fighterc.class)!=null){
@@ -268,6 +270,7 @@ public class Fighter extends Actor
 
     public void setFS(FireSupportStrat fs){
         currentFS = fs;
+        //System.out.println(currentFS.toString());
     }
 
     /*** 
@@ -296,7 +299,7 @@ public class Fighter extends Actor
             default:
                 currentPU = puNone;
         }
-
+        //System.out.println("fighter.setPuState(): " + arg);
         currentPU.activate();
     }
 

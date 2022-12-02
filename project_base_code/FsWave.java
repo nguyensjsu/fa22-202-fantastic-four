@@ -13,7 +13,12 @@ public class FsWave extends FireSupportStrat implements ITimerObserver
     };
 
     @Override
+    public String toString(){
+        return "FS is wave";
+    }
+    @Override
     public void boom(){
+        //System.out.println("FS1: boom");
         World w = this.fighter.getWorld();
         loadAmmo();
         fire();

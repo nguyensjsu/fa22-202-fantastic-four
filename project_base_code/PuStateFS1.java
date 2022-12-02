@@ -14,6 +14,7 @@ public class PuStateFS1 extends PuState{
         sound_effect.play();
         this.fighter.shield.deactivate();
         this.fighter.setFS(this.fighter.fsRadial);
+        //System.out.println("FS1: fighter set fs radial");
         this.fighter.setPuTimer(6);
     }
 

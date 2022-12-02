@@ -15,7 +15,13 @@ public class FsRadial extends FireSupportStrat implements ITimerObserver
     };
 
     @Override
+    public String toString(){
+        return "FS is radial";
+    }
+    
+    @Override
     public void boom(){
+        //System.out.println("FS1: boom");
         resume();
         /*
         generateCoords();
