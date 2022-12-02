@@ -5,6 +5,7 @@
 - [Week 1](#Week-1)
 - [Week 2](#Week-2)
 - [Week 3](#Week-3)
+- [Week 4](#Week-4)
 ---
 ## Week 1 
 Date: October 29th to November 4th
@@ -57,7 +58,7 @@ Through the weekly group meeting that takes place every Wednesday and the chats 
 
 ---
 ## Week 3
-Date: November 12th to November 19
+Date: November 12th to November 19th
 
 ### Completed Tasks
 * Refactor current enemy moving method with strategy pattern.
@@ -77,4 +78,25 @@ Date: November 12th to November 19
 This week will serve as a test to see how beneficial it is for agile teams to communicate successfully. The team successfully proposes certain issues that are present in the current project as well as solutions to those bugs during their weekly zoom meetings and via chat. Ray also provided some suggestions for upcoming features, including some intriguing suggestions for player aircraft props. Additionally, everyone spoke on whether or not it would be possible to implement this feature, as well as other related topics. time, it is planned to enhance the relevant functions and requirements of the whole project, to perform thorough testing, and so on. Additionally, it is planned to have more frequent meetings as the meeting sprint is reaching its final week.
 
 ---
+## Week 4
+Date: November 19th to November 26th
 
+### Completed Tasks
+* Refactor current enemy moving method with strategy pattern. 
+  * Three mode: 
+    * enemy stay still 
+    * enemy move vertically down 
+    * enemy move down but toward to player (attack mode)
+
+### Ongoing Tasks
+By considering the current playability of the game, it is possible to communicate further with the scoreboard made by teammates. I'm going to make some upgrades to the way monsters appear in the current game.
+* Modify the stereotyped appearance of enemy, and upgrade the frequency and speed of monster appearances in turn according to the current player's score.
+
+### Blocker
+* There is currently no any blocker on my side of implementation.
+
+### XP Value: Communication
+* Facilitate the organization of, and adherence to the timetable for, our weekly meetings.
+* Maintain open lines of communication with one another and disclose the status of each individual participant in the present group.
+* Talking about how we are thinking with the project that is now being worked on
+* As well as pondered and shared ideas about how to make our game more fun/features to play.
