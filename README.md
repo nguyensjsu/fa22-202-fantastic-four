@@ -1,4 +1,4 @@
-# Fantastic Four
+# Fantastic Four - Space Shooter Game Expansion
 
 ## Team members
 
@@ -6,12 +6,14 @@
 | ----------- | ------------- |
 | Yikang Chen | Feedback      |
 | Jianle Li   | Communication |
-| Ray Sheng   |               |
+| Ray Sheng   | Respect       |
 | Yiyang Yin  |               |
 
 ## About the project
 ### Description 
-Ray
+Space Invaders of 1978 pioneered a genre of video games that gave rise to a vast lineage of games over the past 40+ years. The original subgenre of space shooter games had very simple gameplay due to the technical limitations of their time. The player typically takes control of a fighter jet in space and shoots down alien invaders. The player-controlled fighter moves left and right to aim at incoming enemies and dodge enemy attacks, shooting a single projectile straight ahead. The simplicity of this type of games made it an ideal model for students to replicate as a beginner's tutorial in game development and computer programming in general.
+
+For our project, we took an open-source [simplified Galaga clone](https://www.greenfoot.org/scenarios/25287) made with Greenfoot, updated it with new gameplay features and brought it into the glorious new world of the 1990s.
 
 ### Feature Set
 Yiyang
@@ -55,6 +57,9 @@ Ray
 ### Jianle Li
 
 ### Ray Sheng
+#### Power-up Items
+#### Secondary Attacks
+#### Healing and Shielding
 
 ### Yiyang Yin
 
@@ -95,6 +100,11 @@ Ray
        2) Before reaching a specific score, the boss will not emerge.
 
 * Ray Sheng
+  1) Looked through potential project candidates and suggested project source code  
+  2) Added Powerup Items to the game for enemies to drop on death that the player can pick up for advanced effects
+  3) Introduced some variety to gameplay in the form of secondary attacks that can be performed by the player-controlled fighter
+  4) Added healing and shielding mechanisms to the game to improve player survivability and extending play session time
+
 
 * Yiyang Yin
 
