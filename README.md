@@ -7,7 +7,7 @@
 | Yikang Chen | Feedback      |
 | Jianle Li   | Communication |
 | Ray Sheng   | Respect       |
-| Yiyang Yin  |               |
+| Yiyang Yin  | Courage       |
 
 ## About the project
 ### Description 
@@ -16,7 +16,12 @@ Space Invaders of 1978 pioneered a genre of video games that gave rise to a vast
 For our project, we took an open-source [simplified Galaga clone](https://www.greenfoot.org/scenarios/25287) made with Greenfoot, updated it with new gameplay features and brought it into the glorious new world of the 1990s.
 
 ### Feature Set
-Yiyang
+- Support player level up gameplay
+- Support player special effects such as shield and powerup
+- Support player heart pickup mechanism
+- Automatic level upgrade 
+- Automatic buff objects release and interactice logic
+- Monster traverse path is optimized and expended
 
 ### How to run this project
 - Option 1: Playing [online]()
@@ -38,8 +43,6 @@ Jianle
 * Start Screen
 * Game Screen
 * Game Over Screen
-Yiyang
-* LeaderBoard Screen
 
 ### High level diagrams
 #### Architecture Diagram
@@ -105,6 +108,23 @@ With only 2 components, it might seem a little contrived to implement a Chain of
 
 
 ### Yiyang Yin
+
+#### Singleton Pattern
+
+##### Factories as singletons
+![image](images/singletonClass.png)
+There is a 1 on 1 relationship for glyph factories to their designated screens. Therefore, we can create such factories as singletons, making sure that only one copy of such factory is in charge of glyphs on a specific page.
+In this project, MenuScreenGlyphFactory and GameOverScreenGlyphFactory are both implemented as singletons. They are invoked by using getInstance method and can only be accessed this way, no real constructor is provided.
+![image](images/singletonExample.png)
+You can see a clear interpretation of singleton design in the following portion of our code:
+![image](images/singletonCode.png)
+#### Abstract Factory Pattern
+The factory method is used to create item objects (button, label) for Menu Screen and Game Screen.
+* AbstractFactory(IGlyphFactory): This is the interface as the fundation of all concreate factories in this project. It regulates the methods needed in a factory.
+* ConcreteFactory(MenuScreenGlyphFactory, GameOverScreenGlyphFactory, and LeaderboardScreenGlyphFactory): implements the factory method to create the concrete products for specific screen. In this case, the screens are considered different clients, they come in to the factories and ask for different products containing different parts. Buttons and labels can be created and assembled in customized ways in the different factories and eventually shipped to screens with independent responsibility and feature.
+* AbstractProduct (Button, Label): declares an interface for a type of product object.
+* ConcreteProduct (eg: startButton, tryAgainButton, screenTitle): These are the components that can be customized and added to a specific screen. Note that although some buttons in different screens have similar functionality, they are not the same object and are created rather by different concrete factories.
+* Client(screens): uses a set of related products created in ConcreteFactory and doesn’t need to know how these products are created.
 
 ## Project backlog and chart
 * Sprint Task Sheet
