@@ -18,6 +18,9 @@ In this week, we initialized our first scrum standup meeting on Wednesday night.
 
 - There are no major blocks for my coding, but I talked more with my teammates who are in charge of implementing the level system so that I could intergrade the different behaviors of the obstacle objects based on the difficulty(level) of the game in the current state. In this way, player will not feel bored even if they are good at the game.
 
+#### XP Core Value: Courage
+
+To improve courage of the team, I started multiple interesting idea that could bring up brainstorm.
 ## Week2
 
 #### Tasks done this week

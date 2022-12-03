@@ -183,6 +183,12 @@ Note that components are in a ordered list.
 
 
 * Yiyang Yin
+  1. Design and implemented screens and transitions using Singleton and Abstract Factory patterns.
+  2. Design and implemented UI components using Composite pattern.
+  3. Design and implemented integration of monster classes.
+  4. Design and implemented multiple fighter classes.
+  5. Promoted XP Core Value "Courage" by design and implementing multiple prototypes for this project, for example introducing changes for possible duel player mode, fighter customization, and leaderboard.
+  6. Organizing scrum meetings, tracking progress in task board, as well as writting agenda for Readme.
 
 ### Journals
 - Yikang Chen - [Member Journal](/individual_journals/yikang_chen_journal.md)
