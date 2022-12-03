@@ -49,14 +49,14 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 ## Key feature designs
 ### Yikang Chen
 
-I use the **Strategy Design Pattern** to implement the **different ways of attack**. With the game score increasing, the LeftLaser and the RightLaser will appear, and they will emit rays in different directions.
+I use the **Strategy Design Pattern** to implement the **different ways of attack**. With the game score increasing, the `LeftLaser` and the `RightLaser` will appear, and they will emit rays in different directions.
 
 **Class Diagram**
 
 ![LaserStrategyPattern](images/LaserDesignPattern.png)
 
-- I create FlighterLevel1 and FlighterLevelx as the implementation class of the LaserStrategy. When the fighter is at the 1 level, FlighterLevel1 will work. When the fighter is at the x level (x > 1), FlighterLevelx will work.
-- LaserContext is a common class as the entrance of executing the strategy of the laser.
+- I create `FlighterLevel1` and `FlighterLevelx` as the implementation class of the `LaserStrategy`. When the fighter is at the 1 level, `FlighterLevel1` will work. When the fighter is at the x level (x > 1), `FlighterLevelx` will work.
+- `LaserContext` is a common class as the entrance of executing the strategy of the laser.
 
 ### Jianle Li
 
