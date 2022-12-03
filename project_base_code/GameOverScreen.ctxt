@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=MenuScreen
+comment0.target=GameOverScreen
 comment1.params=world
-comment1.target=MenuScreen(MyWorld)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MenuScreen\n
+comment1.target=GameOverScreen(MyWorld)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ GameOverScreen\n\ \n
 comment2.params=c
 comment2.target=void\ addSubComponent(IDisplayComponent)
 comment3.params=c

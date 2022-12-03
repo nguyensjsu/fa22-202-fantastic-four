@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class MenuScreen extends Screen implements IDisplayComponent
 {
     private Button startButton;
-    private Button lbButton;
+    //private Button lbButton;
     private Button exitButton;
     private Label screenTitle;
     private MenuScreenGlyphFactory menuScreenGlyphFactory; 
@@ -18,7 +18,7 @@ public class MenuScreen extends Screen implements IDisplayComponent
         components = new ArrayList<>();
         menuScreenGlyphFactory = MenuScreenGlyphFactory.getInstance(world);
         startButton = menuScreenGlyphFactory.startButton;
-        lbButton = menuScreenGlyphFactory.lbButton;
+        //lbButton = menuScreenGlyphFactory.lbButton;
         exitButton = menuScreenGlyphFactory.exitButton;
     }
     
@@ -43,7 +43,7 @@ public class MenuScreen extends Screen implements IDisplayComponent
         super.active();
 
         addSubComponent(startButton);
-        addSubComponent(lbButton);
+        //addSubComponent(lbButton);
         addSubComponent(exitButton);  
         display();
         act();
@@ -55,11 +55,11 @@ public class MenuScreen extends Screen implements IDisplayComponent
          if(Greenfoot.mouseClicked(startButton)){
                 startButton.onClick();
         }
-        if(Greenfoot.mouseClicked(lbButton)){
-               world.getScoreBoard().drawNewScore("Your new score is: " + String.valueOf(world.getCounter().getValue()), 200, 20, new Color(0x0, 0x0, 0x0), 25);
-               world.getScoreBoard().drawScores();
-               lbButton.onClick();
-        }
+        //if(Greenfoot.mouseClicked(lbButton)){
+        //       world.getScoreBoard().drawNewScore("Your new score is: " + String.valueOf(world.getCounter().getValue()), 200, 20, new Color(0x0, 0x0, 0x0), 25);
+        //       world.getScoreBoard().drawScores();
+        //       lbButton.onClick();
+        //}
         if(Greenfoot.mouseClicked(exitButton)){
                 Greenfoot.stop();
         }

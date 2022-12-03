@@ -1,6 +1,5 @@
 #BlueJ class context
 comment0.target=LeaderboardScreenGlyphFactory
-comment0.text=\n\ Write\ a\ description\ of\ class\ MenuScreenGlyphFactory\ here.\n\ \n\ @author\ (Jing)\ \n\ @version\ (v1.0)\n
 comment1.params=world
 comment1.target=LeaderboardScreenGlyphFactory(MyWorld)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MenuScreenGlyphFactory\n

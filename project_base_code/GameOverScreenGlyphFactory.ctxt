@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GameOverScreenGlyphFactory
+comment1.params=world
+comment1.target=GameOverScreenGlyphFactory(MyWorld)
+comment2.params=world
+comment2.target=GameOverScreenGlyphFactory\ getInstance(MyWorld)
+comment3.params=
+comment3.target=void\ CreateButton()
+comment4.params=
+comment4.target=void\ CreateLabel()
+numComments=5

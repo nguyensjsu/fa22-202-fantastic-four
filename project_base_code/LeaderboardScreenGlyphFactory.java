@@ -1,10 +1,5 @@
 import greenfoot.*; 
-/**
- * Write a description of class MenuScreenGlyphFactory here.
- * 
- * @author (Jing) 
- * @version (v1.0)
- */
+
 public class LeaderboardScreenGlyphFactory implements IGlyphFactory
 {
     public static Button backToMenuButton;
@@ -37,8 +32,8 @@ public class LeaderboardScreenGlyphFactory implements IGlyphFactory
     
     public void CreateButton() {
         backToMenuButton = new Button(world);
-        backToMenuButton.create(false, "Back", 30, new Color(0, 0, 0, 0), world.WIDTH/4, world.HEIGHT/10, new Color(0, 0, 0, 0));
-        backToMenuButton.setLocation(world.WIDTH/2, world.HEIGHT*8/9);
+        backToMenuButton.create(false, "Back", 30, new Color(0, 0, 0, 0), 500/4, 500/10, new Color(0, 0, 0, 0));
+        backToMenuButton.setLocation(500/2, 500*8/9);
         backToMenuButton.setNextScreen(MyWorld.SCREENS.MENU);
     }
     
@@ -48,6 +43,6 @@ public class LeaderboardScreenGlyphFactory implements IGlyphFactory
         //screenTitle.setLocation(world.WIDTH/2, world.HEIGHT/6);
 
         leaderboard = LocalScoreBoard.getInstance(400,300,world);
-        leaderboard.setLocation(world.WIDTH/2, world.HEIGHT/2);
+        leaderboard.setLocation(500/2, 500/2);
     }
 }

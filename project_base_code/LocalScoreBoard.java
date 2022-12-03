@@ -80,74 +80,74 @@ public class LocalScoreBoard extends Actor implements IDisplayComponent
         drawString("Near You", 100 + getImage().getWidth() / 2, topSpace - HEADER_TEXT_HEIGHT - 5, MAIN_COLOR, HEADER_TEXT_HEIGHT);        
         
         //localDrawUserPanel(GAP, topSpace, (getImage().getWidth() / 2) - GAP, topSpace + numUsers * pixelsPerUser, world.getScores());
-        drawUserPanel(GAP, topSpace, (getImage().getWidth() / 2) - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getTop(numUsers));
-        drawUserPanel(GAP + getImage().getWidth() / 2, topSpace, getImage().getWidth() - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getNearby(numUsers));
+        //drawUserPanel(GAP, topSpace, (getImage().getWidth() / 2) - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getTop(numUsers));
+        //drawUserPanel(GAP + getImage().getWidth() / 2, topSpace, getImage().getWidth() - GAP, topSpace + numUsers * pixelsPerUser, UserInfo.getNearby(numUsers));
     }
     
-    private void localDrawUserPanel(int left, int top, int right, int bottom, LocalScoreList scores)
-    {
-        getImage().setColor(MAIN_COLOR);
-        getImage().drawRect(left, top, right - left, bottom - top);
-        
-        if (scores == null) {
-            return;
-        }
-        
-        UserInfo me = UserInfo.getMyInfo();
-        int y = top + GAP;
-        for (int i = 0; i < scores.getSize(); i++)
-        {            
-            getImage().fillRect(left + 5, y - GAP + 1, right - left - 10, 50 + 2*GAP - 1);
-
-            int x = left + 10;
-            drawString("#" + Integer.toString(i), x, y+18, MAIN_COLOR, 14);
-            x += 50;
-            drawString(Integer.toString(scores.getScore(i)), x, y+18, SCORE_COLOR, 14);
-            x += 80;
-            x += 55;
-            y += 50 + 2*GAP;
-        }
-    }
+    //private void localDrawUserPanel(int left, int top, int right, int bottom, LocalScoreList scores)
+    //{
+    //    getImage().setColor(MAIN_COLOR);
+    //    getImage().drawRect(left, top, right - left, bottom - top);
+    //    
+    //    if (scores == null) {
+    //        return;
+    //    }
+    //    
+    //    UserInfo me = UserInfo.getMyInfo();
+    //   int y = top + GAP;
+    //    for (int i = 0; i < scores.getSize(); i++)
+    //    {            
+    //        getImage().fillRect(left + 5, y - GAP + 1, right - left - 10, 50 + 2*GAP - 1)//////;
+    //
+    //        int x = left + 10;
+    //        drawString("#" + Integer.toString(i), x, y+18, MAIN_COLOR, 14);
+    //        x += 50;
+    //       drawString(Integer.toString(scores.getScore(i)), x, y+18, SCORE_COLOR, 14);
+    //        x += 80;
+    //        x += 55;
+    //        y += 50 + 2*GAP;
+    //    }
+    //}
     
-    private void drawUserPanel(int left, int top, int right, int bottom, List users)
-    {
-        getImage().setColor(MAIN_COLOR);
-        getImage().drawRect(left, top, right - left, bottom - top);
-        
-        if (users == null) {
-            return;
-        }
-        
-        UserInfo me = UserInfo.getMyInfo();
-        int y = top + GAP;
-        for (Object obj : users)
-        {
-            UserInfo playerData = (UserInfo)obj;            
-            Color c;
-            
-            if (me != null && playerData.getUserName().equals(me.getUserName()))
-            {
-                // Highlight our row in a sky blue colour:
-                c = BACKGROUND_HIGHLIGHT_COLOR;
-            }
-            else
-            {
-                c = BACKGROUND_COLOR;
-            }
-            getImage().setColor(c);
-            getImage().fillRect(left + 5, y - GAP + 1, right - left - 10, 50 + 2*GAP - 1);
-
-            int x = left + 10;
-            drawString("#" + Integer.toString(playerData.getRank()), x, y+18, MAIN_COLOR, 14);
-            x += 25;
-            drawString(playerData.getString(0), x, y+18, MAIN_COLOR, 14);
-            x += 25;
-            drawString(Integer.toString(playerData.getScore()), x, y+18, SCORE_COLOR, 14);
-            x += 80;
-            getImage().drawImage(playerData.getUserImage(), x, y);
-            x += 55;
-            drawString(playerData.getUserName(), x, y + 18, MAIN_COLOR, 14);
-            y += 50 + 2*GAP;
-        }
-    }
+    //private void drawUserPanel(int left, int top, int right, int bottom, List users)
+    //{
+    //    getImage().setColor(MAIN_COLOR);
+    //    getImage().drawRect(left, top, right - left, bottom - top);
+    //    
+    //    if (users == null) {
+    //        return;
+    //    }
+    //    
+    //    UserInfo me = UserInfo.getMyInfo();
+    //    int y = top + GAP;
+    //    for (Object obj : users)
+    //    {
+    //        UserInfo playerData = (UserInfo)obj;            
+    //        Color c;
+    //        
+    //        if (me != null && playerData.getUserName().equals(me.getUserName()))
+    //        {
+    //            // Highlight our row in a sky blue colour:
+    //            c = BACKGROUND_HIGHLIGHT_COLOR;
+    //        }
+    //        else
+    //        {
+    //            c = BACKGROUND_COLOR;
+    //        }
+    //        getImage().setColor(c);
+    //        getImage().fillRect(left + 5, y - GAP + 1, right - left - 10, 50 + 2*GAP - 1);
+    //
+    //        int x = left + 10;
+    //        drawString("#" + Integer.toString(playerData.getRank()), x, y+18, MAIN_COLOR, 14);
+    //        x += 25;
+    //        drawString(playerData.getString(0), x, y+18, MAIN_COLOR, 14);
+    //        x += 25;
+    //        drawString(Integer.toString(playerData.getScore()), x, y+18, SCORE_COLOR, 14);
+    //        x += 80;
+    //        getImage().drawImage(playerData.getUserImage(), x, y);
+    //        x += 55;
+    //        drawString(playerData.getUserName(), x, y + 18, MAIN_COLOR, 14);
+    //        y += 50 + 2*GAP;
+    //    }
+    //}
 }

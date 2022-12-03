@@ -8,9 +8,7 @@ public class MyWorld extends World
     private Screen currentScreen;
     private MenuScreen menuScreen;
     private GameScreen gameScreen;
-    private LocalScoreBoard scoreBoard;
     private GameOverScreen gameOverScreen;
-    private LeaderboardScreen leaderboardScreen;
     
     private MenuScreenGlyphFactory menuScreenGlyphFactory;
     private LeaderboardScreenGlyphFactory lbSGlyphFactory;
@@ -26,9 +24,8 @@ public class MyWorld extends World
         gOSGlyphFactory = new GameOverScreenGlyphFactory(this);
         // Create screens in MyWorld
         menuScreen = new MenuScreen(this);
-        //gameScreen = new GameScreen(this);
-        //gameOverScreen = new GameOverScreen(this);
-        //leaderboardScreen = new LeaderboardScreen(this);
+        gameScreen = new GameScreen(this);
+        gameOverScreen = new GameOverScreen(this);
         
         //scoreBoard = LocalScoreBoard.getInstance(400,300,this);
         //scoreBoard.drawNewScore("Your new score is: " + String.valueOf(this.getCounter().getValue()), 200, 20, new Color(0x0, 0x0, 0x0), 25);
@@ -75,9 +72,9 @@ public class MyWorld extends World
         addObject(stage,43,11);
     }
     
-    public LocalScoreBoard getScoreBoard(){
-        return scoreBoard;
-    }
+    //public LocalScoreBoard getScoreBoard(){
+    //    return scoreBoard;
+    //}
     
     /**
      * A method to set nextScreen and activate the Screen
@@ -98,10 +95,10 @@ public class MyWorld extends World
                 currentScreen = gameScreen; 
                 break;
             }
-            case LEADERBOARD: {
-                currentScreen = leaderboardScreen; 
-                break;
-            }
+            //case LEADERBOARD: {
+            //    currentScreen = leaderboardScreen; 
+            //    break;
+            //}
             default: currentScreen = menuScreen;
         }
         currentScreen.active();
