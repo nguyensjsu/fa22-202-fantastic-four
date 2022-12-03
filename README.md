@@ -64,11 +64,11 @@ To keep track of which power-up effect is active at any given time, we applied t
 
 ##### State Class Diagram
 
-[!Power-Up State Class Diagram](images/PowerupStates.png)
+![Power-Up State Class Diagram](images/PowerupStates.png)
 
 ##### State Transition Table
 
-[!Power-Up State Transition Table](images.PowerupStatesTransition.png)
+![Power-Up State Transition Table](images.PowerupStatesTransition.png)
 
 #### Secondary Attacks
 The player-controlled fighter now has the ability to launch a secondary attack besides the vanilla basic attack. When the player-controlled fighter picks up a "Fire Support" power-up item, it gains the temporary ability to launch a corresponding secondary attack by pressing the "D" key.
@@ -80,7 +80,7 @@ In this particular application of the Strategy Pattern, instead of using an inte
 Currently, only 2 different secondary attack types are implemented. Due to the use of the Strategy Pattern, more varieties of secondary attacks can be easily added in a modular way.
 
 ##### Strategy Class Diagram
-[!Secondary Attack Strategies](images/SecondaryAttackStrategies.png)
+![Secondary Attack Strategies](images/SecondaryAttackStrategies.png)
 
 #### Healing and Shielding
 
