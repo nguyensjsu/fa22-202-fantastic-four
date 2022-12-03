@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Icon
+comment0.text=\n\ Write\ a\ description\ of\ class\ icon\ here.\n\ \n\ @author\ (Dee)\ \n\ @version\ (v1.0)\n
+comment1.params=world
+comment1.target=Icon(MyWorld)
+comment2.params=hasInputImg\ str\ fontSize\ textColor\ width\ height\ bgColor
+comment2.target=void\ create(java.lang.Boolean,\ java.lang.String,\ int,\ greenfoot.Color,\ int,\ int,\ greenfoot.Color)
+numComments=3
