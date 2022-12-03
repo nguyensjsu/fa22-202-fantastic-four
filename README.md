@@ -1,4 +1,4 @@
-# Fantastic Four - Space Shooter Game Expansion
+# Fantastic Four - Space Shooter Game Modification
 
 ## Team members
 
@@ -58,7 +58,17 @@ Ray
 
 ### Ray Sheng
 #### Power-up Items and Effects
-Enemies may drop power-up items upon death. Drop rates, randomization, and the specific method that adds power-up objects into the game world are handled by a Singleton LootManager object. Singleton Pattern does not count towards project grading but it is still a useful design pattern to apply.
+Enemies may drop power-up items upon death. Drop rates, randomization, and the specific method that adds power-up objects into the game world are handled by a Singleton LootManager object. Singleton Pattern does not count towards project grading but it is still a useful design pattern to apply, because this way we can easily adjust drop rates by modifying only the LootManager class instead of having to go into each enemy class.
+
+To keep track of which power-up effect is active at any given time, we applied the State pattern to manage the Fighter object's power-up state.
+
+##### State Class Diagram
+
+[!Power-Up State Class Diagram](images/PowerupStates.png)
+
+##### State Transition Table
+
+[!Power-Up State Transition Table](images.PowerupStatesTransition.png)
 
 #### Secondary Attacks
 The player-controlled fighter now has the ability to launch a secondary attack besides the vanilla basic attack. When the player-controlled fighter picks up a "Fire Support" power-up item, it gains the temporary ability to launch a corresponding secondary attack by pressing the "D" key.
@@ -67,6 +77,9 @@ Secondary Attack modes are managed by using a Strategy pattern. The "D" key call
 
 In this particular application of the Strategy Pattern, instead of using an interface to represent the abstract strategy, we used a parent class that also doubles the default strategy class with which secondary fire is not active.
 
+Currently, only 2 different secondary attack types are implemented. Due to the use of the Strategy Pattern, more varieties of secondary attacks can be easily added in a modular way.
+
+##### Strategy Class Diagram
 [!Secondary Attack Strategies](images/SecondaryAttackStrategies.png)
 
 #### Healing and Shielding
