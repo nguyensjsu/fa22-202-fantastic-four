@@ -39,7 +39,6 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 
 ## Project architecture
 ### UI Wireframes
-Jianle
 * Start Screen
   * ![StartScreenUIWireframes](images/StartScreen.png)
 * Game Screen
@@ -51,14 +50,12 @@ Jianle
 #### Architecture Diagram
 ![Architechture](images/Architechture.png)
 
-#### Component diagram
-Yikang
-
-#### State diagram
-Ray
-
 ## Key feature designs
 ### Yikang Chen
+
+I use the **Strategy Design Pattern** to implement the **different ways of attack**. With the game score increasing, the LeftLaser and the RightLaser will appear, and they will emit rays in different directions.
+
+![LaserStrategyPattern](images/LaserStrategyPattern.png)
 
 ### Jianle Li
 * In this project, I am primarily responsible for functions pertaining to enemies and have mostly enhanced three features:
@@ -142,10 +139,13 @@ An example view into the class diagram for singleton pattern in our project:
 #### Abstract Factory Pattern
 The factory method is used to create item objects (button, label) for Menu Screen and Game Screen.
 * AbstractFactory(IGlyphFactory): This is the interface as the fundation of all concreate factories in this project. It regulates the methods needed in a factory.
-* ConcreteFactory(MenuScreenGlyphFactory, GameOverScreenGlyphFactory, and LeaderboardScreenGlyphFactory): implements the factory method to create the concrete products for specific screen. In this case, the screens are considered different clients, they come in to the factories and ask for different products containing different parts. Buttons and labels can be created and assembled in customized ways in the different factories and eventually shipped to screens with independent responsibility and feature.
+* ConcreteFactory(MenuScreenGlyphFactory, GameOverScreenGlyphFactory): implements the factory method to create the concrete products for specific screen. In this case, the screens are considered different clients, they come in to the factories and ask for different products containing different parts. Buttons and labels can be created and assembled in customized ways in the different factories and eventually shipped to screens with independent responsibility and feature.
 * AbstractProduct (Button, Label): declares an interface for a type of product object.
-* ConcreteProduct (eg: startButton, tryAgainButton, screenTitle): These are the components that can be customized and added to a specific screen. Note that although some buttons in different screens have similar functionality, they are not the same object and are created rather by different concrete factories.
+* ConcreteProduct (for example: startButton, tryAgainButton, screenTitle): These are the components that can be customized and added to a specific screen. Note that although some buttons in different screens have similar functionality, they are not the same object and are created rather by different concrete factories.
 * Client(screens): uses a set of related products created in ConcreteFactory and doesn’t need to know how these products are created.
+To see the details of our abstract and concrete factories, please read the class diagram below:
+![image](images/factory_class.png)
+
 
 ## Project backlog and chart
 * Sprint Task Sheet
@@ -153,9 +153,9 @@ The factory method is used to create item objects (button, label) for Menu Scree
 * Weekly Scrum Task Board
   Yiyang
    * Week 1
-![image](images/early.png)
+  ![image](images/early.png)
    * Week 2
-![image](images/mid.png)
+  ![image](images/mid.png)
    * Week 3
 
    * Week 4
@@ -164,6 +164,10 @@ The factory method is used to create item objects (button, label) for Menu Scree
 ### Contributions
 
 * Yikang Chen
+  1. Implemented the logic of gaining EXP and level-up
+  2. Design the logic of different ways of attack with strategy desgin pattern
+  3. Implement LaserLeft and LaserRight
+  4. Complete testing
 
 * Jianle Li
   1) Provide potential project alternatives at the beginning of the project.
