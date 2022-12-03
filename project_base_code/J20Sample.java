@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class J20Sample extends Actor implements FighterFactory 
+public class J20Sample extends Fighter
 {
     private int time;
     public static int score;

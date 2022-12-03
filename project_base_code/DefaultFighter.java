@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class DefaultFighter extends Actor implements FighterFactory 
+public class DefaultFighter extends Fighter 
 {
     private int time;
     public static int score;

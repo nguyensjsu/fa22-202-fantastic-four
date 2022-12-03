@@ -1,17 +1,13 @@
 #BlueJ class context
 comment0.target=FighterFactory
 comment1.params=
-comment1.target=int\ getScore()
-comment2.params=s
-comment2.target=void\ setScore(int)
-comment3.params=
-comment3.target=void\ lifePlus()
-comment4.params=
-comment4.target=void\ lifeMinus()
-comment5.params=f
-comment5.target=void\ setFS(FireSupportStrat)
-comment6.params=s
-comment6.target=void\ setPuState(java.lang.String)
-comment7.params=i
-comment7.target=void\ setPuTimer(int)
-numComments=8
+comment1.target=void\ lifePlus()
+comment2.params=
+comment2.target=void\ lifeMinus()
+comment3.params=f
+comment3.target=void\ setFS(FireSupportStrat)
+comment4.params=s
+comment4.target=void\ setPuState(java.lang.String)
+comment5.params=i
+comment5.target=void\ setPuTimer(int)
+numComments=6
