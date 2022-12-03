@@ -30,19 +30,19 @@ public class GameOverScreenGlyphFactory implements IGlyphFactory
         ButtonBgColor = new Color(207, 136, 23);
         
         tryAgainButton = new Button(world);
-        tryAgainButton.create(true, "tryAgainButton.png", 30, Color.WHITE, world.WIDTH/4, world.HEIGHT/10, ButtonBgColor);
-        tryAgainButton.setLocation(world.WIDTH/3, world.HEIGHT*3/4);
+        tryAgainButton.create(true, "tryAgainButton.png", 30, Color.WHITE, 500/4, 500/10, ButtonBgColor);
+        tryAgainButton.setLocation(500/3, 500*3/4);
         tryAgainButton.setNextScreen(MyWorld.SCREENS.GAME);
 
         leaderboardButton = new Button(world);
-        leaderboardButton.create(true, "leaderBoardButton.png", 30, Color.WHITE, world.WIDTH/4, world.HEIGHT/10,ButtonBgColor);
-        leaderboardButton.setLocation(world.WIDTH*2/3, world.HEIGHT*3/4);
+        leaderboardButton.create(true, "leaderBoardButton.png", 30, Color.WHITE, 500/4, 500/10,ButtonBgColor);
+        leaderboardButton.setLocation(500*2/3, 500*3/4);
         leaderboardButton.setNextScreen(MyWorld.SCREENS.LEADERBOARD);
     }
     
     public void CreateLabel() {
         screenTitle = new Label(world);
-        screenTitle.create(true, "gameOver.png", 50, new Color(0, 0, 0, 0), world.WIDTH/2, world.HEIGHT/4, new Color(0, 0, 0, 0));
-        screenTitle.setLocation(world.WIDTH/2, world.HEIGHT/3);
+        screenTitle.create(true, "gameOver.png", 50, new Color(0, 0, 0, 0), 500/2, 500/4, new Color(0, 0, 0, 0));
+        screenTitle.setLocation(500/2, 500/3);
     }
 }

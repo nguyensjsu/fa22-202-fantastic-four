@@ -9,6 +9,14 @@ public class MyWorld extends World
         super(500, 500, 1);
         makeActors();
     }
+    
+    public enum SCREENS 
+    {
+        MENU,
+        GAME,
+        LEADERBOARD
+    } 
+    
     public void makeActors(){     
         for(int x=0;x<46;x++){
             Box box = new Box(images[Greenfoot.getRandomNumber(9)]);
@@ -34,4 +42,6 @@ public class MyWorld extends World
         Stage stage = new Stage();
         addObject(stage,43,11);
     }
+    
+    
 }

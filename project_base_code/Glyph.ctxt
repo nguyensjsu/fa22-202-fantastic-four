@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Glyph
+comment1.params=world
+comment1.target=Glyph(MyWorld)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Glyph\n
+comment2.params=c
+comment2.target=void\ addSubComponent(IDisplayComponent)
+comment3.params=c
+comment3.target=void\ removeSubCompnent(IDisplayComponent)
+comment4.params=x\ y
+comment4.target=void\ setLocation(int,\ int)
+comment5.params=
+comment5.target=void\ display()
+comment6.params=hasInputImg\ text\ fontSize\ textColor\ width\ height\ backgroundColor
+comment6.target=void\ create(java.lang.Boolean,\ java.lang.String,\ int,\ greenfoot.Color,\ int,\ int,\ greenfoot.Color)
+numComments=7

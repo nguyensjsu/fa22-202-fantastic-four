@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Button
+comment0.text=\n\ Write\ a\ description\ of\ class\ Button\ here.\n\ \n\ @author\ (Jing)\ \n\ @version\ (v1.0)\n
+comment1.params=world
+comment1.target=Button(MyWorld)
+comment2.params=hasInputImg\ str\ fontSize\ textColor\ width\ height\ backgroundColor
+comment2.target=void\ create(java.lang.Boolean,\ java.lang.String,\ int,\ greenfoot.Color,\ int,\ int,\ greenfoot.Color)
+comment3.params=nextScreen
+comment3.target=void\ setNextScreen(MyWorld.SCREENS)
+comment4.params=
+comment4.target=void\ onClick()
+comment4.text=\n\ This\ method\ is\ called\ when\ button\ is\ clicked.\n\ To\ transite\ to\ nextScreen.\n
+numComments=5
