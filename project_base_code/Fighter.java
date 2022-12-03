@@ -32,13 +32,17 @@ public class Fighter extends Actor
     GreenfootSound fire = new GreenfootSound("fire.mp3");
 
     public Fighter(){
-        getImage().scale(50,50);
+        setPic();
 
         setParams();
 
         setPuState("none");
     }
 
+    private void setPic() {
+        getImage().scale(50,50);
+    }
+    
     private void setParams(){
         this.shield = new Shield(this);
         this.hull = new Hull(this);
