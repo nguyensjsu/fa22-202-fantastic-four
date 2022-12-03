@@ -150,7 +150,7 @@ The factory method is used to create item objects (button, label) for Menu Scree
    * Week 1
 ![image](images/early.png)
    * Week 2
-
+![image](images/mid.png)
    * Week 3
 
    * Week 4
