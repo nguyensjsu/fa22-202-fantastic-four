@@ -39,7 +39,6 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 
 ## Project architecture
 ### UI Wireframes
-Jianle
 * Start Screen
   * ![StartScreenUIWireframes](images/StartScreen.png)
 * Game Screen
@@ -47,15 +46,8 @@ Jianle
 * Game Over Screen
   * ![GameOverUIWireframes](images/GameOverScreen.png)
 
-### High level diagrams
-#### Architecture Diagram
+### Architecture Diagram
 Yiyang
-
-#### Component diagram
-Yikang
-
-#### State diagram
-Ray
 
 ## Key feature designs
 ### Yikang Chen
