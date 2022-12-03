@@ -49,7 +49,7 @@ Jianle
 
 ### High level diagrams
 #### Architecture Diagram
-Yiyang
+![Architechture](images/Architechture.png)
 
 #### Component diagram
 Yikang
