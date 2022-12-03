@@ -14,12 +14,13 @@ public class MenuScreen extends Screen implements IDisplayComponent
      */
     public MenuScreen(MyWorld world)
     {
-        super(world, new GreenfootImage("wallpaper.png"));
+        super(world, new GreenfootImage("manuSmallWord500.png"));
         components = new ArrayList<>();
         menuScreenGlyphFactory = MenuScreenGlyphFactory.getInstance(world);
         startButton = menuScreenGlyphFactory.startButton;
         //lbButton = menuScreenGlyphFactory.lbButton;
         exitButton = menuScreenGlyphFactory.exitButton;
+        
     }
     
     public void addSubComponent( IDisplayComponent c ) {
@@ -51,7 +52,8 @@ public class MenuScreen extends Screen implements IDisplayComponent
 
     @Override
     public void act()
-    {       
+    {   
+        
          if(Greenfoot.mouseClicked(startButton)){
                 startButton.onClick();
         }

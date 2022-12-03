@@ -30,8 +30,8 @@ public class MenuScreenGlyphFactory implements IGlyphFactory
     
     public void CreateButton() {
         startButton = new Button(world);
-        startButton.create(false, "Start", 50, new Color(0, 0, 0, 0), 250, 70, new Color(0, 0, 0, 0));
-        startButton.setLocation(500*9/50, 500*4/5);
+        startButton.create(false, "start", 50, new Color(0, 0, 0, 0), 100, 100, new Color(255, 255, 255, 0));
+        startButton.setLocation(250, 300);
         startButton.setNextScreen(MyWorld.SCREENS.GAME);
         
         //lbButton = new Button(world);
@@ -41,7 +41,7 @@ public class MenuScreenGlyphFactory implements IGlyphFactory
         
         exitButton = new Button(world);
         exitButton.create(false, "Exit", 30, new Color(0, 0, 0, 0), 100, 50, new Color(0, 0, 0, 0));
-        exitButton.setLocation(500*9/10, 500*17/20);
+        exitButton.setLocation(250, 500);
     
     }
     

@@ -46,6 +46,11 @@ public class MyWorld extends World
         makeActors();
     }
     
+    protected void prepareManu()
+    {        
+        makeManuActors();
+    }
+    
     public void makeActors(){     
         for(int x=0;x<46;x++){
             Box box = new Box(images[Greenfoot.getRandomNumber(9)]);
@@ -59,6 +64,29 @@ public class MyWorld extends World
         Zako zako = new Zako();
         addObject(zako1,385,305);
         addObject(zako,112,305);
+        //
+        Laser laser = new Laser();
+        addObject(laser,100,100);
+        //
+        Station station = new Station();
+        addObject(station,100,100);
+        Station.level=0;
+        Station.gameover=false;
+        //
+        Stage stage = new Stage();
+        addObject(stage,43,11);
+    }
+    
+    public void makeManuActors(){     
+        for(int x=0;x<46;x++){
+            Box box = new Box(images[Greenfoot.getRandomNumber(9)]);
+            addObject(box,xcord[x],ycord[x]);
+        }
+        //
+        Menu menu = new Menu();
+        addObject(menu,250,250);
+        //
+        
         //
         Laser laser = new Laser();
         addObject(laser,100,100);
