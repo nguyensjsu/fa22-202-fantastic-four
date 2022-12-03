@@ -1,12 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
-/**
- * An actor class that can display a scoreboard locally, using arraylist to track score.
- * Based on default ScoreBoard class in Greenfoot.
- * @author Team 8
- * @version 1.0
- */
 public class LocalScoreBoard extends Actor implements IDisplayComponent
 {
     // The vertical gap between user images in the scoreboard:
@@ -26,13 +20,6 @@ public class LocalScoreBoard extends Actor implements IDisplayComponent
     protected int x, y; // location 
     protected MyWorld world;
     private ArrayList<Integer> scores;
-    
-    /**
-     * Constructor for objects of class ScoreBoard.
-     * <p>
-     * You can specify the width and height that the score board should be, but
-     * a minimum width of 600 will be enforced.
-     */
     
     private LocalScoreBoard(int width, int height, MyWorld world) {
         this.world = world;

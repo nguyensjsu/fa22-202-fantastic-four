@@ -117,6 +117,7 @@ public class MyWorld extends World
         currentScreen = gameOverScreen;
         currentScreen.active();
     }
+    
     /**
      * A "Act" method in the world activate the currentScreen
      * 
@@ -127,5 +128,10 @@ public class MyWorld extends World
         if(currentScreen != null) {
             currentScreen.active();
         }
+    }
+    
+    private static void reset() {
+        LocalScoreBoard.reset();
+        LeaderboardScreenGlyphFactory.reset();
     }
 }
