@@ -68,7 +68,7 @@ To keep track of which power-up effect is active at any given time, we applied t
 
 ##### State Transition Table
 
-![Power-Up State Transition Table](images.PowerupStatesTransition.png)
+![Power-Up State Transition Table](images/PowerupStatesTransition.png)
 
 #### Secondary Attacks
 The player-controlled fighter now has the ability to launch a secondary attack besides the vanilla basic attack. When the player-controlled fighter picks up a "Fire Support" power-up item, it gains the temporary ability to launch a corresponding secondary attack by pressing the "D" key.
