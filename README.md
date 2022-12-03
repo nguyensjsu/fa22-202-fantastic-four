@@ -51,9 +51,15 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 
 I use the **Strategy Design Pattern** to implement the **different ways of attack**. With the game score increasing, the LeftLaser and the RightLaser will appear, and they will emit rays in different directions.
 
-![LaserStrategyPattern](images/LaserStrategyPattern.png)
+**Class Diagram**
+
+![LaserStrategyPattern](images/LaserDesignPattern.png)
+
+- I create FlighterLevel1 and FlighterLevelx as the implementation class of the LaserStrategy. When the fighter is at the 1 level, FlighterLevel1 will work. When the fighter is at the x level (x > 1), FlighterLevelx will work.
+- LaserContext is a common class as the entrance of executing the strategy of the laser.
 
 ### Jianle Li
+
 * In this project, I am primarily responsible for functions pertaining to enemies and have mostly enhanced three features:
   1) The enemies' appearances has transitioned from a `one-time appearance` to a `steady appearance`.
   2) The enemies will select its way of movement at random toward to player. It can choose three different movement methods, which are: `Stay still(default)`, `Move Vertically Down` and `Move Toward The Player`. (Strategy pattern is in used here.)
