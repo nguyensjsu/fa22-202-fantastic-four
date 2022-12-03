@@ -46,8 +46,9 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 * Game Over Screen
   * ![GameOverUIWireframes](images/GameOverScreen.png)
 
-### Architecture Diagram
-Yiyang
+### High level diagrams
+#### Architecture Diagram
+![Architechture](images/Architechture.png)
 
 ## Key feature designs
 ### Yikang Chen
