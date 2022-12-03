@@ -134,6 +134,8 @@ In this project, MenuScreenGlyphFactory and GameOverScreenGlyphFactory are both 
 ![image](images/singletonExample.png)
 You can see a clear interpretation of singleton design in the following portion of our code:
 ![image](images/singletonCode.png)
+An example view into the class diagram for singleton pattern in our project:
+
 #### Abstract Factory Pattern
 The factory method is used to create item objects (button, label) for Menu Screen and Game Screen.
 * AbstractFactory(IGlyphFactory): This is the interface as the fundation of all concreate factories in this project. It regulates the methods needed in a factory.
