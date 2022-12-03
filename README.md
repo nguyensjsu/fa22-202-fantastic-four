@@ -142,10 +142,13 @@ An example view into the class diagram for singleton pattern in our project:
 #### Abstract Factory Pattern
 The factory method is used to create item objects (button, label) for Menu Screen and Game Screen.
 * AbstractFactory(IGlyphFactory): This is the interface as the fundation of all concreate factories in this project. It regulates the methods needed in a factory.
-* ConcreteFactory(MenuScreenGlyphFactory, GameOverScreenGlyphFactory, and LeaderboardScreenGlyphFactory): implements the factory method to create the concrete products for specific screen. In this case, the screens are considered different clients, they come in to the factories and ask for different products containing different parts. Buttons and labels can be created and assembled in customized ways in the different factories and eventually shipped to screens with independent responsibility and feature.
+* ConcreteFactory(MenuScreenGlyphFactory, GameOverScreenGlyphFactory): implements the factory method to create the concrete products for specific screen. In this case, the screens are considered different clients, they come in to the factories and ask for different products containing different parts. Buttons and labels can be created and assembled in customized ways in the different factories and eventually shipped to screens with independent responsibility and feature.
 * AbstractProduct (Button, Label): declares an interface for a type of product object.
-* ConcreteProduct (eg: startButton, tryAgainButton, screenTitle): These are the components that can be customized and added to a specific screen. Note that although some buttons in different screens have similar functionality, they are not the same object and are created rather by different concrete factories.
+* ConcreteProduct (for example: startButton, tryAgainButton, screenTitle): These are the components that can be customized and added to a specific screen. Note that although some buttons in different screens have similar functionality, they are not the same object and are created rather by different concrete factories.
 * Client(screens): uses a set of related products created in ConcreteFactory and doesn’t need to know how these products are created.
+To see the details of our abstract and concrete factories, please read the class diagram below:
+![image](images/factory_class.png)
+
 
 ## Project backlog and chart
 * Sprint Task Sheet
