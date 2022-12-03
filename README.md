@@ -52,6 +52,10 @@ Yiyang
 ## Key feature designs
 ### Yikang Chen
 
+I use the **Strategy Design Pattern** to implement the **different ways of attack**. With the game score increasing, the LeftLaser and the RightLaser will appear, and they will emit rays in different directions.
+
+![LaserStrategyPattern](images/LaserStrategyPattern.png)
+
 ### Jianle Li
 * In this project, I am primarily responsible for functions pertaining to enemies and have mostly enhanced three features:
   1) The enemies' appearances has transitioned from a `one-time appearance` to a `steady appearance`.
@@ -148,9 +152,9 @@ To see the details of our abstract and concrete factories, please read the class
 * Weekly Scrum Task Board
   Yiyang
    * Week 1
-![image](images/early.png)
+  ![image](images/early.png)
    * Week 2
-![image](images/mid.png)
+  ![image](images/mid.png)
    * Week 3
 
    * Week 4
