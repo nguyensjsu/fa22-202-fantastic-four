@@ -149,7 +149,8 @@ To see the details of our abstract and concrete factories, please read the class
 
 ## Project backlog and chart
 * Sprint Task Sheet
-* Burn down chart
+### Burn down chart
+![Burn Down Chart](images/Burndown.png)
 * Weekly Scrum Task Board
   Yiyang
    * Week 1
