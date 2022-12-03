@@ -163,6 +163,10 @@ To see the details of our abstract and concrete factories, please read the class
 ### Contributions
 
 * Yikang Chen
+  1. Implemented the logic of gaining EXP and level-up
+  2. Design the logic of different ways of attack with strategy desgin pattern
+  3. Implement LaserLeft and LaserRight
+  4. Complete testing
 
 * Jianle Li
   1) Provide potential project alternatives at the beginning of the project.
