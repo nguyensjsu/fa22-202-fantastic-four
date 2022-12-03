@@ -24,16 +24,12 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 - Monster traverse path is optimized and expended
 
 ### How to run this project
-- Option 1: Playing [online]()
-- Option 2:
   * Install [Greenfoot](https://www.greenfoot.org/download)
   * Clone this [repository](https://github.com/nguyensjsu/fa22-202-fantastic-four)
   * Run `project.greenfoot` inside the src folder
 
 ## Project videos
-12/3 meeting
 * [User Story Video](https://youtu.be/yFqlWyShiAo)
-* [Project Demo Video]()
 * [Stand-up meeting]()
 * [Retrospective meeting]()
 
@@ -136,6 +132,7 @@ You can see a clear interpretation of singleton design in the following portion 
 ![image](images/singletonCode.png)
 An example view into the class diagram for singleton pattern in our project:
 ![image](images/singleton_class.png)
+
 #### Abstract Factory Pattern
 The factory method is used to create item objects (button, label) for Menu Screen and Game Screen.
 * AbstractFactory(IGlyphFactory): This is the interface as the fundation of all concreate factories in this project. It regulates the methods needed in a factory.
@@ -146,20 +143,25 @@ The factory method is used to create item objects (button, label) for Menu Scree
 To see the details of our abstract and concrete factories, please read the class diagram below:
 ![image](images/factory_class.png)
 
+#### Composite Pattern
+In order to organize the glyphs we use in this project, we implemented the composite pattern for screens to take in buttons, labels and as such. Composite pattern requires the use of a unifying interface, which is called IDisplayComponent. This is deeply influenced by the starbucks project design choice for the screens to display different parts of needed knowledge. 
+While utilizing this interface, managing child components is easy, and extension to other graphic UI specific functionality is greatly assured.
+Please see below for a class diagram indicating the composite pattern in my code design:
+![image](images/composite_class.png)
+Note that components are in a ordered list.
 
 ## Project backlog and chart
 * Sprint Task Sheet
 ### Burn down chart
 ![Burn Down Chart](images/Burndown.png)
 * Weekly Scrum Task Board
-  Yiyang
-   * Week 1
+   * Early (Week 1)
   ![image](images/early.png)
-   * Week 2
+   * Mid (Week 2,3)
   ![image](images/mid.png)
-   * Week 3
+   * Late (Week 4)
+  ![image](images/late.png)
 
-   * Week 4
 
 ## Individual Contributions and team journals
 ### Contributions
