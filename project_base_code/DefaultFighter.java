@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class J20Sample extends Actor implements FighterFactory 
+public class DefaultFighter extends Actor implements FighterFactory 
 {
     private int time;
     public static int score;
@@ -31,7 +31,7 @@ public class J20Sample extends Actor implements FighterFactory
 
     GreenfootSound fire = new GreenfootSound("fire.mp3");
 
-    public J20Sample(){
+    public DefaultFighter(){
         setPic();
 
         setParams();
@@ -39,16 +39,15 @@ public class J20Sample extends Actor implements FighterFactory
         setPuState("none");
     }
 
-    public int getScore() {
+    public static int getScore() {
         return score;
     }
     
-    public void setScore(int s) {
+    public static void setScore(int s) {
         score = s;
     }
     
     private void setPic() {
-        setImage("j20.png");
         getImage().scale(50,50);
     }
     

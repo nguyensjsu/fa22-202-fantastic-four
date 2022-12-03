@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=PuStateShield
 comment1.params=f
-comment1.target=PuStateShield(Fighter)
+comment1.target=PuStateShield(FighterFactory)
 comment2.params=
 comment2.target=void\ activate()
 comment3.params=

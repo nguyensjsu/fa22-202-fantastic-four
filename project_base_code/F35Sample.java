@@ -1,55 +1,61 @@
 import greenfoot.*;
-public class F35Sample extends Fighter
+public class F35Sample extends Actor implements FighterFactory 
 {
-    private int time;
+    public int time;
     public static int score;
     public static int lives =3;
     public static int fighterlevel = 1;
     public static boolean makeReps;
-    private int madeReps=0;
+    public int madeReps=0;
     public int madecheats =0;
 
     // fire support functionality
-    protected int fsTime;
-    protected FireSupportStrat currentFS;
-    protected FireSupportStrat fsRadial;
-    protected FireSupportStrat fsWave;
-    protected FireSupportStrat fsNone;
+    public int fsTime;
+    public FireSupportStrat currentFS;
+    public FireSupportStrat fsRadial;
+    public FireSupportStrat fsWave;
+    public FireSupportStrat fsNone;
 
     // damage handling
-    protected Shield shield;
-    protected Hull hull;
-    protected IDamageTarget damageChain;
+    public Shield f35Shield;
+    public Hull hull;
+    public IDamageTarget damageChain;
 
     // powerup implementation
-    protected PuState currentPU;
-    protected PuStateNone puNone;
-    protected PuStateFS1 puFS1;
-    protected PuStateFS2 puFS2;
-    protected PuStateShield puShield;
-    protected int puTimer;
+    public PuState currentPU;
+    public PuStateNone puNone;
+    public PuStateFS1 puFS1;
+    public PuStateFS2 puFS2;
+    public PuStateShield puShield;
+    public int puTimer;
 
     GreenfootSound fire = new GreenfootSound("fire.mp3");
 
     public F35Sample(){
+        super();
         setPic();
-
         setParams();
-
-        setPuState("none");
+        System.out.println("check2:" + f35Shield);
     }
 
+    public int getScore() {
+        return score;
+    }
+    
+    public void setScore(int s) {
+        score = s;
+    }
+    
     private void setPic() {
         setImage("f35.png");
         getImage().scale(50,50);
     }
     
     private void setParams(){
-        this.shield = new Shield(this);
-        this.hull = new Hull(this);
-        this.shield.setNext((IDamageTarget)hull);
-        this.damageChain = (IDamageTarget)shield;
-
+        f35Shield = new Shield(this);
+        hull = new Hull(this);
+        f35Shield.setNext((IDamageTarget)hull);
+        damageChain = (IDamageTarget)f35Shield;
         fsTime = 0;
         currentFS = new FireSupportStrat(this);
         fsRadial = new FsRadial(this);
@@ -305,6 +311,8 @@ public class F35Sample extends Fighter
                 currentPU = puNone;
         }
         //System.out.println("fighter.setPuState(): " + arg);
+        System.out.println(f35Shield);
+        System.out.println(currentPU);
         currentPU.activate();
     }
 

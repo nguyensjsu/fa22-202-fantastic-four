@@ -3,5 +3,5 @@ comment0.target=LaserContext
 comment1.params=laserStrategy
 comment1.target=LaserContext(LaserStrategy)
 comment2.params=offset\ fighter
-comment2.target=void\ executeStrategy(int,\ Fighter)
+comment2.target=void\ executeStrategy(int,\ FighterFactory)
 numComments=3

@@ -1,5 +1,5 @@
 import greenfoot.*;
-public class Su57Sample extends Fighter
+public class Su57Sample extends Actor implements FighterFactory 
 {
     private int time;
     public static int score;
@@ -39,6 +39,14 @@ public class Su57Sample extends Fighter
         setPuState("none");
     }
 
+    public int getScore() {
+        return score;
+    }
+    
+    public void setScore(int s) {
+        score = s;
+    }
+    
     private void setPic() {
         setImage("su57.png");
         getImage().scale(50,50);

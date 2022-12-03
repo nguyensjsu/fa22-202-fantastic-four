@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=FireSupportStrat
 comment1.params=f
-comment1.target=FireSupportStrat(Fighter)
+comment1.target=FireSupportStrat(FighterFactory)
 comment2.params=
 comment2.target=void\ boom()
 comment3.params=

@@ -3,5 +3,5 @@ comment0.target=PowerupShield
 comment1.params=
 comment1.target=PowerupShield()
 comment2.params=f
-comment2.target=void\ activate(Fighter)
+comment2.target=void\ activate(FighterFactory)
 numComments=3
