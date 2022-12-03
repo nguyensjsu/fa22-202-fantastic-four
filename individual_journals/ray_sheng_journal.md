@@ -46,7 +46,7 @@ The part of the code that I was working on was mostly isolated from the others' 
 #### XP Core Value: Respect
 We were respectful of one another's time and ideas, as usual. 
 
-We knew who was working on which feature and trusted one another's ability to get it done. The standup meeting went smoothly without issue. In discussing features and changes, we were able to do so in a civil manner without conflict.
+We knew who was working on which feature and trusted one another's ability to get it done. The standup meeting went smoothly without issue. In discussing features and changes, we were able to do so in a civil manner without conflict. We understood that everyone's intention is to contribute to the common goal of making a more interesting game.
 
 
 ### Week 2
