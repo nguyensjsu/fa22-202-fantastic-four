@@ -151,8 +151,10 @@ Please see below for a class diagram indicating the composite pattern in my code
 Note that components are in a ordered list.
 
 ## Project backlog and chart
-* Sprint Task Sheet
-* Burn down chart
+### [Sprint Task Sheet - Click for PDF](images/Sprint.pdf)
+![Sprint Task Sheet](images/Sprint.png)
+### Burn down chart
+![Burn Down Chart](images/Burndown.png)
 * Weekly Scrum Task Board
    * Early (Week 1)
   ![image](images/early.png)
