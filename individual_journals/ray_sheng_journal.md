@@ -1,59 +1,53 @@
 # Ray Sheng Journal
 
-## Credit
-
-<a href="https://www.flaticon.com/free-icons/zeus" title="zeus icons">Zeus icons created by Freepik - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/poseidon" title="poseidon icons">Poseidon icons created by Freepik - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/shield" title="shield icons">Shield icons created by Freepik - Flaticon</a>
-
-<a href="https://www.flaticon.com/free-icons/bomb" title="bomb icons">Bomb icons created by Freepik - Flaticon</a>
-
-powerdown sound by [leviclaassen](https://freesound.org/people/leviclaassen/)
-
-explode sound by [jalastram](https://freesound.org/people/jalastram/)
-
-firesupport sound by [EminYILDIRIM/](https://freesound.org/people/EminYILDIRIM/)
-
-shield sound by [OwlStorm](https://freesound.org/people/OwlStorm/)
-
-powerup sound by [Eschwabe3](https://freesound.org/people/Eschwabe3/)
-
-heal sound by [taikodrum](https://freesound.org/people/taikodrum/)
-
-
-
-## Note:
-- problem: no more new enemies after boss fight
-- problem: when player is killed in boss fight, boss still moves and shoots in game over screen
-
 ## Weekly Scrum Report
 
 ### Week 4
 
-- refactor fighter class to handle life loss using chain of responsibility: 2 hours
-- add fighter powerup states to accommodate fire support status: 2 hours
-- apply State pattern in fighter behavior code to handle fighter powerup status: 1 hour
-- find and create graphic and sound resources for powerup effects - 2 hours
+#### Scrum Report
 
-- add fire support 1, fire support 2, and shield drops - 0.5 hour
-- change drop mechanism for enemies to accommdate new powerups - 2 hours
+##### Tasks Worked on
+- refactor fighter class to handle life loss using chain of responsibility
+- add fighter powerup states to accommodate fire support status
+- add fire support 1, fire support 2, and shield drops
+- change drop mechanism for enemies to accommdate new powerups
 
-- add sound effect for fire support strat 2
-
-- change sprites for powered up fighter - 0.5 hour
-
+##### Tasks to Work on Next
+- change sprites for powered up fighter
+- add sound effects for fire support strats and pickups
 - randomize fire support 2 missile starting x values
+
+##### Blockers
+This week I had merge conflicts with Fighter class code due to the extensive refactors and pattern application. However, because we were very clear on what each team member was working on so the conflict areas were not difficult to understand. I was able to resolve them indivially after spending some time going over the details. No real blockers encountered.
+
+#### XP Core Value: Respect
+This was an especially hectic week for our team members because it is that time of the semester where all classes are starting to have projects due. Everyone's time became more valuable than usual due to its scarcity. We needed to be especially respectful of everyone's time and stress levels, and we communicated prompty to update one another on our progress. We were respectful of one another's expertise over their own part of the code, and merge conflicts were resolved with extra care to not make any modifications that would affect features that other team members were working on.
 
 ### Week 3
 
-- add fire support to fighter - done
-- add fire support base strat - done
-- add custom movement laser -done
-- add fire support strat 1 - done
-- add Timer mechanism for non-actor/non-world objects - done
-- add fire support strat 2 - done
+#### Scrum Report
+
+##### Tasks Worked on
+
+- add fire support to fighter
+- add fire support base strat
+- add custom movement laser
+- add fire support strat 1
+- add Timer mechanism for non-actor/non-world objects
+- add fire support strat 2
+
+##### Tasks to Work on Next
+- apply state pattern to handle power up effects
+- update drop mechanism to accommodate different types of powerup items
+
+##### Blockers
+The part of the code that I was working on was mostly isolated from the others' parts, so there weren't any merge conflicts. The code base is simple enough that any bugs encountered this week was not hard to deal with so nothing would constitute as real blockers for this week.
+
+#### XP Core Value: Respect
+We were respectful of one another's time and ideas, as usual. 
+
+We knew who was working on which feature and trusted one another's ability to get it done. The standup meeting went smoothly without issue. In discussing features and changes, we were able to do so in a civil manner without conflict.
+
 
 ### Week 2
 
@@ -69,6 +63,9 @@ heal sound by [taikodrum](https://freesound.org/people/taikodrum/)
 
 - Design 4 more powerup features
 - Implement 2 more powerup features
+
+##### Blockers
+At this stage of the project, I was mostly still experimenting with project codebase and testing in powerup feature branch. Bugs encountered were minor and were not hard to figure out, so there were no real blocker encountered this week.
 
 #### XP Core Value: Respect
 
@@ -99,24 +96,24 @@ All team members have been respectful of everyone's time. Before we started work
 
 When we came together to discuss and decide on the project details, everyone was respectful of one another's opinions. During the brainstorming session, when someone would have questions or concerns with a proposed feature or idea, we were able to voice them in a respectful way. As a result, we ended up with a plan that was acceptible to everyone.
 
+### Credit Attribution for Audio and Visual Assets Used
 
-## Quick notes - delete later
+<a href="https://www.flaticon.com/free-icons/zeus" title="zeus icons">Zeus icons created by Freepik - Flaticon</a>
 
-### Research ideas
+<a href="https://www.flaticon.com/free-icons/poseidon" title="poseidon icons">Poseidon icons created by Freepik - Flaticon</a>
 
-#### base game candidates:
+<a href="https://www.flaticon.com/free-icons/shield" title="shield icons">Shield icons created by Freepik - Flaticon</a>
 
-- [Galaga clone](https://www.greenfoot.org/scenarios/25287)
-- [Space Invader clone](https://www.youtube.com/watch?v=JeVtaL55-z8)
+<a href="https://www.flaticon.com/free-icons/bomb" title="bomb icons">Bomb icons created by Freepik - Flaticon</a>
 
-#### universal features ideas:
+powerdown sound by [leviclaassen](https://freesound.org/people/leviclaassen/)
 
-- experience points/level up system
-	- use Observer pattern: enemies are subject, player object is oberserver, when enemy gets hit, notify observer to add exp
-- change bgm or on-screen effects based on state
-	- for example: background image and music change when health is low
-	- use State pattern to keep track of state if multivariable
-	- use Observer pattern: player object is subject, app controller is observer, notify observer when player object state changes
-- switch to a different attack or action mode
-	- for example: think Contra's different weapons, changing the behavior of the shoot button
-	- use Strategy pattern: swap in a different strategy for behavior on button press
+explode sound by [jalastram](https://freesound.org/people/jalastram/)
+
+firesupport sound by [EminYILDIRIM/](https://freesound.org/people/EminYILDIRIM/)
+
+shield sound by [OwlStorm](https://freesound.org/people/OwlStorm/)
+
+powerup sound by [Eschwabe3](https://freesound.org/people/Eschwabe3/)
+
+heal sound by [taikodrum](https://freesound.org/people/taikodrum/)
