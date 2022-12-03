@@ -150,14 +150,13 @@ To see the details of our abstract and concrete factories, please read the class
 * Sprint Task Sheet
 * Burn down chart
 * Weekly Scrum Task Board
-  Yiyang
-   * Week 1
+   * Early (Week 1)
   ![image](images/early.png)
-   * Week 2
+   * Mid (Week 2,3)
   ![image](images/mid.png)
-   * Week 3
+   * Late (Week 4)
+  ![image](images/late.png)
 
-   * Week 4
 
 ## Individual Contributions and team journals
 ### Contributions
