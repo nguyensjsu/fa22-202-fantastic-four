@@ -40,7 +40,7 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 ## Project architecture
 ### UI Wireframes
 Jianle
-* Start Screen
+* Start Screen![Start Screen UI Wireframes](images/StartScreen.png)
 * Game Screen
 * Game Over Screen
 
