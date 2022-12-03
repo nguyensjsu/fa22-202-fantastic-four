@@ -7,5 +7,5 @@ comment2.target=void\ move()
 comment3.params=
 comment3.target=void\ behavior()
 comment4.params=f
-comment4.target=void\ activate(FighterFactory)
+comment4.target=void\ activate(Fighter)
 numComments=5

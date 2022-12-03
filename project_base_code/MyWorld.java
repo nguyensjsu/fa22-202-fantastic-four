@@ -68,7 +68,7 @@ public class MyWorld extends World
         Laser laser = new Laser();
         addObject(laser,100,100);
         //
-        Station station = new Station();
+        Station station = new Station(this);
         addObject(station,100,100);
         Station.level=0;
         Station.gameover=false;
@@ -91,7 +91,7 @@ public class MyWorld extends World
         Laser laser = new Laser();
         addObject(laser,100,100);
         //
-        Station station = new Station();
+        Station station = new Station(this);
         addObject(station,100,100);
         Station.level=0;
         Station.gameover=false;

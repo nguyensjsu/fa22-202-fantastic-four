@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Hull
 comment1.params=f
-comment1.target=Hull(FighterFactory)
+comment1.target=Hull(Fighter)
 comment2.params=
 comment2.target=void\ takeHit()
 numComments=3

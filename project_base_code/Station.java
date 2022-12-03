@@ -22,9 +22,12 @@ public class Station extends Actor
     private int time = 0;
     // private int enemyIndex = -1;
     private int scoreSection = 0;
+    private MyWorld world;
+    private GameOverScreenGlyphFactory gOSGlyphFactory; 
 
-    public Station(){
+    public Station(MyWorld w){
         //getImage().scale(100,100);
+        world = w;
     }
     public void act()
     {

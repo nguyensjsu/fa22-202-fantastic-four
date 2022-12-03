@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Shield
-comment1.params=f
-comment1.target=Shield(FighterFactory)
-comment2.params=n
-comment2.target=void\ setNext(IDamageTarget)
-comment3.params=
-comment3.target=void\ takeHit()
-comment4.params=
-comment4.target=void\ activate()
+comment1.params=
+comment1.target=void\ activate()
+comment2.params=
+comment2.target=void\ deactivate()
+comment3.params=f
+comment3.target=Shield(Fighter)
+comment4.params=n
+comment4.target=void\ setNext(IDamageTarget)
 comment5.params=
-comment5.target=void\ deactivate()
+comment5.target=void\ takeHit()
 numComments=6

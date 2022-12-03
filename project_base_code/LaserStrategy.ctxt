@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.target=LaserStrategy
 comment1.params=offset\ fighter
-comment1.target=void\ doOperation(int,\ FighterFactory)
+comment1.target=void\ doOperation(int,\ Fighter)
 numComments=2
