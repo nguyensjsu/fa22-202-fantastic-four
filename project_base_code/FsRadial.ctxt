@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=FsRadial
 comment1.params=f
-comment1.target=FsRadial(FighterFactory)
+comment1.target=FsRadial(Fighter)
 comment2.params=
 comment2.target=java.lang.String\ toString()
 comment3.params=

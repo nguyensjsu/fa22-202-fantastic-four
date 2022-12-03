@@ -41,7 +41,7 @@ public class GameOverScreen extends Screen implements IDisplayComponent
         super.active();
         addSubComponent(gOSGlyphFactory.screenTitle);
         addSubComponent(gOSGlyphFactory.tryAgainButton);
-        addSubComponent(gOSGlyphFactory.leaderboardButton);
+        //addSubComponent(gOSGlyphFactory.leaderboardButton);
      
         display();
         act();

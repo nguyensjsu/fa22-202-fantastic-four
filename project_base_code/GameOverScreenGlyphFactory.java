@@ -30,14 +30,14 @@ public class GameOverScreenGlyphFactory implements IGlyphFactory
         ButtonBgColor = new Color(207, 136, 23);
         
         tryAgainButton = new Button(world);
-        tryAgainButton.create(true, "tryAgainButton.png", 30, Color.WHITE, 500/4, 500/10, ButtonBgColor);
-        tryAgainButton.setLocation(500/3, 500*3/4);
+        tryAgainButton.create(true, "tryAgainButton.png", 30, Color.WHITE, 100, 40, ButtonBgColor);
+        tryAgainButton.setLocation(250, 400);
         tryAgainButton.setNextScreen(MyWorld.SCREENS.GAME);
 
-        leaderboardButton = new Button(world);
-        leaderboardButton.create(true, "leaderBoardButton.png", 30, Color.WHITE, 500/4, 500/10,ButtonBgColor);
-        leaderboardButton.setLocation(500*2/3, 500*3/4);
-        leaderboardButton.setNextScreen(MyWorld.SCREENS.LEADERBOARD);
+        //leaderboardButton = new Button(world);
+        //leaderboardButton.create(true, "leaderBoardButton.png", 30, Color.WHITE, 500/4, 500/10,ButtonBgColor);
+        //leaderboardButton.setLocation(500*2/3, 500*3/4);
+        //leaderboardButton.setNextScreen(MyWorld.SCREENS.LEADERBOARD);
     }
     
     public void CreateLabel() {
