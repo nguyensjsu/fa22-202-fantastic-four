@@ -60,29 +60,48 @@ Ray
 #### Power-up Items and Effects
 Enemies may drop power-up items upon death. Drop rates, randomization, and the specific method that adds power-up objects into the game world are handled by a Singleton LootManager object. Singleton Pattern does not count towards project grading but it is still a useful design pattern to apply, because this way we can easily adjust drop rates by modifying only the LootManager class instead of having to go into each enemy class.
 
-To keep track of which power-up effect is active at any given time, we applied the State pattern to manage the Fighter object's power-up state.
+To keep track of which power-up effect is active at any given time, we applied the State pattern to manage the `Fighter` object's power-up state.
 
 ##### State Class Diagram
 
-![Power-Up State Class Diagram](images/PowerupStates.png)
+![Power-Up State Class Diagram](images/PowerupStates.png 'Power-Up States')
 
 ##### State Transition Table
 
-![Power-Up State Transition Table](images/PowerupStatesTransition.png)
+![Power-Up State Transition Table](images/PowerupStatesTransition.png 'Power-Up State Transitions')
 
 #### Secondary Attacks
 The player-controlled fighter now has the ability to launch a secondary attack besides the vanilla basic attack. When the player-controlled fighter picks up a "Fire Support" power-up item, it gains the temporary ability to launch a corresponding secondary attack by pressing the "D" key.
 
-Secondary Attack modes are managed by using a Strategy pattern. The "D" key calls the `Fighter.fireSupport()` method, which in turn calls the `boom()` method of the fighter object's current Fire Support Strategy, thereby applying different effects to the game world depending on which secodary attack mode is employed at the time.
+Secondary Attack modes are managed by using a Strategy pattern. The "D" key calls the `Fighter.fireSupport()` method, which in turn calls the `boom()` method of the current Fire Support Strategy object, thereby applying different effects to the game world depending on which secodary attack mode is employed at the time.
 
-In this particular application of the Strategy Pattern, instead of using an interface to represent the abstract strategy, we used a parent class that also doubles the default strategy class with which secondary fire is not active.
+In this particular application of the Strategy Pattern, instead of using an interface to represent the abstract strategy, we used a parent class that also doubles as the default strategy class with which secondary fire is not active.
 
 Currently, only 2 different secondary attack types are implemented. Due to the use of the Strategy Pattern, more varieties of secondary attacks can be easily added in a modular way.
 
 ##### Strategy Class Diagram
-![Secondary Attack Strategies](images/SecondaryAttackStrategies.png)
+![Secondary Attack Strategies](images/SecondaryAttackStrategies.png 'Secondary Attack (aka Fire Support) Strategies')
 
 #### Healing and Shielding
+
+In the base game, the player-controlled fighter can only lose lives and cannot gain lives. We implemented a simple healing feature that allows it to gain lives. No design pattern was required for this simple feature.
+
+However, the life-loss mechanism had to be refactored to accommodate the shielding feature, with which the player-controlled fighter can gain a temporary shield (upon picking up the corresponding power-up) that negates all incoming damage. 
+
+Previously, upon being hit by a missile or enemy object, the `bombed()` method within the `Fighter` object directly decrements its `lives` field. We refactored this mechanism to pass the life-loss handling to a chain of responsibility that consists of a `Shield` object and a `Hull` object encapsulated within the `Fighter` object. This allows the shielding mechanism a chance to intercept the message that would otherwise result in the player-controlled fighter's losing a life.
+
+##### Chain of Responsibility Class Diagram
+![Chain of Responsibility Classes](images/DamageChainClass.png 'Damage Handling Classes')
+
+##### Damage-Handling Chain
+
+In the scope of this project, the damage-handling Chain of Responsibility only consists of 2 components: `Shield` and `Hull`. If `Shield` is active, an the empty `Shield.takeHit()` method does nothing and stops the message; otherwise, responsibility is passed to `Hull.takeHit()`, which decrements the `Fighter.lives` field.
+
+![Currently Implemented Damage Chain](images/CurrentChain.png 'Currently Implemented Damage Chain')
+
+With only 2 components, it might seem a little contrived to implement a Chain of Responsibility to do the damage-handling. However, the advantage of doing it like this opens up the code for extension if other damage-handling features were to be added in the future. For example, we might want to add a deflector that bounces enemy projectiles back at the enemy, or an absorber that heals the fighter instead of damaging it. To add these featres, we can simply add new `IDamageTarget` objects to appropriate places in the chain.
+
+![Possible Extension in the Future](images/FutureChain.png 'the chain can be extended with additional features in the future')
 
 
 ### Yiyang Yin
