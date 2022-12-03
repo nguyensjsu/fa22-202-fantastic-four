@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=EnemyNotMoving
-comment0.text=\n\ enemy\ not\ move.\n\n\ @author\n\ @version\n
-comment1.params=actor\ time\ speed
-comment1.target=void\ move(greenfoot.Actor,\ int,\ int)
+comment0.text=\r\n\ enemy\ not\ move.\r\n\r\n\ @author\r\n\ @version\r\n
+comment1.params=actor\ time
+comment1.target=void\ move(greenfoot.Actor,\ int)
 numComments=2

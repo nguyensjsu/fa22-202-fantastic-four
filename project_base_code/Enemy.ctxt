@@ -1,13 +1,8 @@
 #BlueJ class context
 comment0.target=Enemy
-comment0.text=\n\ enemy,\ Zako,\ Goei\ are\ enimies.\n
-comment1.params=
-comment1.target=EnemyMovingStrategy\ getStrategy()
-comment2.params=s
-comment2.target=void\ changeStrategy(EnemyMovingStrategy)
-comment3.params=
-comment3.target=void\ selectRandomMoveStrategy()
-comment4.params=
-comment4.target=void\ dropPowerup()
-comment4.text=\n\ \ \ \ public\ void\ timeInc(){\n\ \ \ \ \ \ \ \ if(Station.level>0){\n\ \ \ \ \ \ \ \ \ \ \ \ time++;\n\ \ \ \ \ \ \ \ \ \ \ \ if(time\=\=61){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ time\=0;\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\ \ \ \ \n
-numComments=5
+comment0.text=\r\n\ enemy,\ Zako,\ Goei\ are\ enimies.\r\n
+comment1.params=s
+comment1.target=void\ changeStrategy(EnemyMovingStrategy)
+comment2.params=
+comment2.target=void\ selectRandomMoveStrategy()
+numComments=3

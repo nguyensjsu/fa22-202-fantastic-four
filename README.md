@@ -15,6 +15,9 @@ Space Invaders of 1978 pioneered a genre of video games that gave rise to a vast
 
 For our project, we took an open-source [simplified Galaga clone](https://www.greenfoot.org/scenarios/25287) made with Greenfoot, updated it with new gameplay features and brought it into the glorious new world of the 1990s.
 
+### [Ad Video](https://youtu.be/yFqlWyShiAo)
+[![CMPE202 Fa-22 Fantastic Four Ad Video]({https://youtu.be/yFqlWyShiAo} "Link Title")
+
 ### Feature Set
 - Support player level up gameplay
 - Support player special effects such as shield and powerup
