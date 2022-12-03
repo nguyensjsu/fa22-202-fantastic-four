@@ -57,9 +57,20 @@ Ray
 ### Jianle Li
 
 ### Ray Sheng
-#### Power-up Items
+#### Power-up Items and Effects
+Enemies may drop power-up items upon death. Drop rates, randomization, and the specific method that adds power-up objects into the game world are handled by a Singleton LootManager object. Singleton Pattern does not count towards project grading but it is still a useful design pattern to apply.
+
 #### Secondary Attacks
+The player-controlled fighter now has the ability to launch a secondary attack besides the vanilla basic attack. When the player-controlled fighter picks up a "Fire Support" power-up item, it gains the temporary ability to launch a corresponding secondary attack by pressing the "D" key.
+
+Secondary Attack modes are managed by using a Strategy pattern. The "D" key calls the `Fighter.fireSupport()` method, which in turn calls the `boom()` method of the fighter object's current Fire Support Strategy, thereby applying different effects to the game world depending on which secodary attack mode is employed at the time.
+
+In this particular application of the Strategy Pattern, instead of using an interface to represent the abstract strategy, we used a parent class that also doubles the default strategy class with which secondary fire is not active.
+
+[!Secondary Attack Strategies](images/SecondaryAttackStrategies.png)
+
 #### Healing and Shielding
+
 
 ### Yiyang Yin
 
@@ -100,7 +111,7 @@ Ray
        2) Before reaching a specific score, the boss will not emerge.
 
 * Ray Sheng
-  1) Looked through potential project candidates and suggested project source code  
+  1) Researched potential project candidates and suggested project source code  
   2) Added Powerup Items to the game for enemies to drop on death that the player can pick up for advanced effects
   3) Introduced some variety to gameplay in the form of secondary attacks that can be performed by the player-controlled fighter
   4) Added healing and shielding mechanisms to the game to improve player survivability and extending play session time
