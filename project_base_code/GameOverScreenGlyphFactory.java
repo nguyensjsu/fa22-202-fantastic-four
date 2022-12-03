@@ -1,10 +1,5 @@
 import greenfoot.*; 
-/**
- * Write a description of class GameOverScreenGlyphFactory here.
- * 
- * @author (Jing) 
- * @version (v1.0)
- */
+
 public class GameOverScreenGlyphFactory implements IGlyphFactory  
 {
     public static Label screenTitle;
@@ -15,9 +10,7 @@ public class GameOverScreenGlyphFactory implements IGlyphFactory
     
     private static GameOverScreenGlyphFactory gOSGlyphFactory = null;
     private MyWorld world;
-    /**
-     * Constructor for objects of class GameOverScreenGlyphFactory
-     */
+    
     public GameOverScreenGlyphFactory(MyWorld world)
     {
         this.world = world;
