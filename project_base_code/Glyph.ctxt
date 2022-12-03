@@ -2,7 +2,6 @@
 comment0.target=Glyph
 comment1.params=world
 comment1.target=Glyph(MyWorld)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Glyph\n
 comment2.params=c
 comment2.target=void\ addSubComponent(IDisplayComponent)
 comment3.params=c

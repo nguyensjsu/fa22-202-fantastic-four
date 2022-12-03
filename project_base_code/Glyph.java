@@ -7,9 +7,6 @@ public abstract class Glyph extends Actor implements IDisplayComponent
     protected MyWorld world;
     protected static final GreenfootSound clickSound = new GreenfootSound("select-click.mp3");
     
-    /**
-     * Constructor for objects of class Glyph
-     */
     public Glyph(MyWorld world)
     {
         this.world = world;
