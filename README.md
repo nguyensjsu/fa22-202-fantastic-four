@@ -148,7 +148,7 @@ The factory method is used to create item objects (button, label) for Menu Scree
 * Weekly Scrum Task Board
   Yiyang
    * Week 1
-![image](images/singletonClass.png)
+![image](images/early.png)
    * Week 2
 
    * Week 3
