@@ -15,9 +15,6 @@ Space Invaders of 1978 pioneered a genre of video games that gave rise to a vast
 
 For our project, we took an open-source [simplified Galaga clone](https://www.greenfoot.org/scenarios/25287) made with Greenfoot, updated it with new gameplay features and brought it into the glorious new world of the 1990s.
 
-### [Ad Video](https://youtu.be/yFqlWyShiAo)
-[![CMPE202 Fa-22 Fantastic Four Ad Video]({https://youtu.be/yFqlWyShiAo} "Link Title")
-
 ### Feature Set
 - Support player level up gameplay
 - Support player special effects such as shield and powerup
@@ -35,7 +32,7 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 
 ## Project videos
 12/3 meeting
-* [User Story Video]()
+* [User Story Video](https://youtu.be/yFqlWyShiAo)
 * [Project Demo Video]()
 * [Stand-up meeting]()
 * [Retrospective meeting]()
@@ -77,7 +74,7 @@ Ray
       * In different stages of the game, there will be different levels of enemies. That is to say, when creating an enemy object, use different life decorators to decorate the enemy object.
         Use `EnemyOneLifeDecorator` for normal enemies, `EnemyTwoLifeDecorator` for elite enemies, and `EnemyThreeLifeDecorator` for bosses.
       * Class Diagram for this will be show as following：![decorator pattern](images/EnemyLifeDecorator.png 'decorator pattern')
-  4) (Pending work) By reading the current score of the player, the monster may be upgraded further (an upgraded version realized by the third features above).
+  4) By reading the current score of the player, the monster may be upgraded further (an upgraded version realized by the third features above).
     1) Each 500/1000 score is separated into several interval. Each interval has a unique assortment of enemies. The number of enemies at each interval grows, as does their speed.
     2) Before reaching a specific score, the boss will not emerge.
 
