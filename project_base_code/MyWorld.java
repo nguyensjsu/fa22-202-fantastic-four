@@ -35,7 +35,6 @@ public class MyWorld extends World
         //scoreBoard.drawScores();
         
         setNextScreen(SCREENS.MENU);
-        //makeActors();
     }
     
     public enum SCREENS 
@@ -44,6 +43,11 @@ public class MyWorld extends World
         GAME,
         LEADERBOARD
     } 
+    
+    protected void prepare()
+    {        
+        makeActors();
+    }
     
     public void makeActors(){     
         for(int x=0;x<46;x++){
