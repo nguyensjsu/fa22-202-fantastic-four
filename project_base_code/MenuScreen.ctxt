@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=MenuScreen
+comment0.text=\n\ Write\ a\ description\ of\ class\ MenuScreen\ here.\n\ \n\ @author\ (Jing)\ \n\ @version\ (v1.0)\n
+comment1.params=world
+comment1.target=MenuScreen(MyWorld)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ MenuScreen\n
+comment2.params=c
+comment2.target=void\ addSubComponent(IDisplayComponent)
+comment3.params=c
+comment3.target=void\ removeSubCompnent(IDisplayComponent)
+comment4.params=
+comment4.target=void\ display()
+comment5.params=x\ y
+comment5.target=void\ setLocation(int,\ int)
+comment6.params=
+comment6.target=void\ active()
+comment7.params=
+comment7.target=void\ act()
+numComments=8
