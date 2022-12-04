@@ -72,7 +72,7 @@ I use the **Strategy Design Pattern** to implement the **different ways of attac
         In order to strengthen/extend the functions related to enemy life, we use the decorator pattern to divide the enemy into three levels:`Normal Enemy One Life`, `Elite Enemies Two Lives` and `Boss multiple lives`.
       * In different stages of the game, there will be different levels of enemies. That is to say, when creating an enemy object, use different life decorators to decorate the enemy object.
         Use `EnemyOneLifeDecorator` for normal enemies, `EnemyTwoLifeDecorator` for elite enemies, and `EnemyThreeLifeDecorator` for bosses.
-      * Class Diagram for this will be show as following：![decorator pattern](images/EnemyLifeDecorator.png 'decorator pattern')
+      * Class Diagram for this will be show as following：![decorator pattern](images/EnemyLifeDecoratorCD.png)
   4) By reading the current score of the player, the monster may be upgraded further (an upgraded version realized by the third features above).
     1) Each 500/1000 score is separated into several interval. Each interval has a unique assortment of enemies. The number of enemies at each interval grows, as does their speed.
     2) Before reaching a specific score, the boss will not emerge.
