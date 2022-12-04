@@ -30,7 +30,7 @@ For our project, we took an open-source [simplified Galaga clone](https://www.gr
 
 ## Project videos
 * [User Story Video](https://youtu.be/yFqlWyShiAo)
-* [Stand-up meeting]()
+* [Stand-up meeting](https://youtu.be/byEZYgo8lI0)
 * [Retrospective meeting]()
 
 ## Project architecture
