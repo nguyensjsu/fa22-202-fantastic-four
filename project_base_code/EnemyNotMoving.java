@@ -1,10 +1,9 @@
 import greenfoot.*;
 
 /**
- * enemy not move.
  *
- * @author
- * @version
+ *  Enemy Staying still, No movement
+ *
  */
 public class EnemyNotMoving implements EnemyMovingStrategy 
 {

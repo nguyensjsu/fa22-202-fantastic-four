@@ -1,6 +1,10 @@
 import greenfoot.*;
 import java.util.*;
 
+/**
+ *  Enemy Moving Towards to Fighter (player's fighter)
+ *
+ */
 public class EnemyMovingTowardsFighter implements EnemyMovingStrategy
 {
     public void move(Actor actor, int time, int speed) {

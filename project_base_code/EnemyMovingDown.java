@@ -1,10 +1,8 @@
 import greenfoot.*;
 
 /**
- *  enemy move downwards.
+ *  Enemy moving vertically down to bottom
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class EnemyMovingDown implements EnemyMovingStrategy
 {
