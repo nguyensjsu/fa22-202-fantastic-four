@@ -65,7 +65,7 @@ I use the **Strategy Design Pattern** to implement the **different ways of attac
   2) The enemies will select its way of movement at random toward to player. It can choose three different movement methods, which are: `Stay still(default)`, `Move Vertically Down` and `Move Toward The Player`. (Strategy pattern is in used here.)
     * `Strategy Pattern `
       * For each movement method (or algorithm), we use a separate class for encapsulation. These algorithms are also interchangeable. So it is very suitable to use strategy pattern. This pattern makes the program very scalable. If we suddenly want to add a new movement method, we only need to add a new class.
-      * Class Diagram for this will be show as following：![strategy pattern](images/EnemyMovingStrategy.png 'strategy pattern')
+      * Class Diagram for this will be show as following：![strategy pattern](images/EnemyMovingStrategyCD.png)
   3) Refactoring enemies lives implementation. Allowing enemies to `upgrade its level` (More lives)  (Decorator pattern is in used here.)
     * `Decorator Pattern`
       * The original enemy, whether it is Goei or Zako, has a health value of 1 and will disappear after being hit by a laser.
